@@ -2,7 +2,7 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:mani_sterowanie_STM32 Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:mani_sterowanie_STM32 Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:mani_sterowanie_STM32 Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:mani_sterowanie_STM32 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:nadajnikduzy Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Echo\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Echo\ Debug/activeLaunchTarget=null\:---
