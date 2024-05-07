@@ -1,14 +1,58 @@
-17:21:50 **** Incremental Build of configuration Debug for project odbiornikManipulator ****
+20:09:33 **** Incremental Build of configuration Debug for project odbiornikManipulator ****
 make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Device/ST/STM32L1xx/Include -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:153:25: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  153 |   nRF24_SetRXAddress(0, "Odb");
+      |                         ^~~~~
+      |                         |
+      |                         char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:154:22: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  154 |   nRF24_SetTXAddress("Nad");
+      |                      ^~~~~
+      |                      |
+      |                      char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   37 | void nRF24_SetTXAddress(uint8_t* address);
+      |                         ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:205:27: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  205 |     nRF24_SetRXAddress(0, "Odb");
+      |                           ^~~~~
+      |                           |
+      |                           char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:206:24: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  206 |     nRF24_SetTXAddress("Nad");
+      |                        ^~~~~
+      |                        |
+      |                        char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   37 | void nRF24_SetTXAddress(uint8_t* address);
+      |                         ~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "odbiornikManipulator.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="odbiornikManipulator.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: odbiornikManipulator.elf
+ 
 arm-none-eabi-size   odbiornikManipulator.elf 
+arm-none-eabi-objdump -h -S  odbiornikManipulator.elf  > "odbiornikManipulator.list"
    text	   data	    bss	    dec	    hex	filename
-  20752	     24	   1984	  22760	   58e8	odbiornikManipulator.elf
+  20280	     24	   1984	  22288	   5710	odbiornikManipulator.elf
 Finished building: default.size.stdout
  
-17:23:28 **** Incremental Build of configuration Debug for project odbiornikManipulator ****
+Finished building: odbiornikManipulator.list
+ 
+20:10:55 **** Incremental Build of configuration Debug for project odbiornikManipulator ****
 make -j12 all 
 arm-none-eabi-size   odbiornikManipulator.elf 
    text	   data	    bss	    dec	    hex	filename
-  20752	     24	   1984	  22760	   58e8	odbiornikManipulator.elf
+  20280	     24	   1984	  22288	   5710	odbiornikManipulator.elf
 Finished building: default.size.stdout
  

@@ -1,10 +1,10 @@
-17:23:28 **** Incremental Build of configuration Debug for project odbiornikManipulator ****
+20:10:55 **** Incremental Build of configuration Debug for project odbiornikManipulator ****
 make -j12 all 
 arm-none-eabi-size   odbiornikManipulator.elf 
    text	   data	    bss	    dec	    hex	filename
-  20752	     24	   1984	  22760	   58e8	odbiornikManipulator.elf
+  20280	     24	   1984	  22288	   5710	odbiornikManipulator.elf
 Finished building: default.size.stdout
  
 
-17:23:28 Build Finished. 0 errors, 0 warnings. (took 418ms)
+20:10:56 Build Finished. 0 errors, 0 warnings. (took 521ms)
 

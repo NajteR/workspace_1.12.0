@@ -211,46 +211,8 @@ int main(void)
 		  stopczlon2();
 		  stopczlon3();
 		  stopczlon4();
-//		  stopLmotorF();
-//		  stopRmotorF();
-
-		  	 			if (0 > pwmRight)
-		  	 			{
-		  	 				pwmRight = pwmRight + step;
-		  	 			}
-		  	 			else if (0 < pwmRight)
-		  	 			{
-		  	 				pwmRight = pwmRight - step;
-		  	 			}
-		  	 			if (pwmRight > 0)
-		  	 				{
-		  	 					RmotorF();
-		  	 					PWMval(6, (int)pwmRight);
-		  	 				}
-		  	 			else if (pwmRight < 0)
-		  	 			{
-		  	 				RmotorB();
-		  	 				PWMval(6, ((int)pwmRight)*-1);
-		  	 			}
-
-		  	 					if (0 > pwmLeft)
-		  	 						{
-		  	 							pwmLeft = pwmLeft+step;
-		  	 						}
-		  	 						else if (0 < pwmLeft)
-		  	 						{
-		  	 							pwmLeft = pwmLeft-step;
-		  	 						}
-		  	 						if (pwmLeft > 0)
-		  	 						{
-		  	 							LmotorF();
-		  	 							PWMval(7, (int)pwmLeft);
-		  	 						}
-		  	 						else if (pwmLeft < 0)
-		  	 						{
-		  	 							LmotorB();
-		  	 							PWMval(7, ((int)pwmLeft)*-1);
-		  	 						}
+		  stopLmotorF();
+		  stopRmotorF();
 
 
 
