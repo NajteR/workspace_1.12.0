@@ -697,27 +697,27 @@ void motor5control()
 	}
 }
 
-void kinematyka()
-{
-	float l1=0.39;
-	float l2=0.335;
-	float l3=0.23;
-	float fi=0;
-
-
-
-	float x=0.5;
-	float y=0.3;
-
-	float x2=x-l3;
-	float y2=y;
-
-
-	float teta2=acos(((x2^2)+(y2^2)-(l1^2)-(l2^2))/(2*l1*l2));
-	float teta1=acos(((x2^2)+((l1+l2*cos(teta2))^2)-((y2-l2*sin(teta2))^2))/(2*x2*(l1+l2*cos(teta2))));
-	float teta3=fi-teta1-teta2;
-
-}
+//void kinematyka()
+//{
+//	float l1=0.39;
+//	float l2=0.335;
+//	float l3=0.23;
+//	float fi=0;
+//
+//
+//
+//	float x=0.5;
+//	float y=0.3;
+//
+//	float x2=x-l3;
+//	float y2=y;
+//
+//
+//	float teta2=acos(((x2^2)+(y2^2)-(l1^2)-(l2^2))/(2*l1*l2));
+//	float teta1=acos(((x2^2)+((l1+l2*cos(teta2))^2)-((y2-l2*sin(teta2))^2))/(2*x2*(l1+l2*cos(teta2))));
+//	float teta3=fi-teta1-teta2;
+//
+//}
 
 
 /* USER CODE END 4 */

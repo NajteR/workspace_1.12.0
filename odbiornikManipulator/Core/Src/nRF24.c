@@ -349,7 +349,7 @@ void nRF24_Init(SPI_HandleTypeDef *hspi)
 
 	HAL_Delay(5);
 
-	nRF24_SetPALevel(NRF24_PA_PWR_0dBM); // Radio power
+	nRF24_SetPALevel(NRF24_PA_PWR_M18dBM); // Radio power
 	nRF24_SetDataRate(NRF24_RF_DR_250KBPS); // Data Rate
 	nRF24_EnableCRC(1); // Enable CRC
 	nRF24_SetCRCLength(NRF24_CRC_WIDTH_1B); // CRC Length 1 byte

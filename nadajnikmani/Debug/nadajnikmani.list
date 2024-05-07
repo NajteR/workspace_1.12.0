@@ -2079,8 +2079,8 @@ void nRF24_Init(SPI_HandleTypeDef *hspi)
  8000f12:	2005      	movs	r0, #5
  8000f14:	f000 fa0c 	bl	8001330 <HAL_Delay>
 
-	nRF24_SetPALevel(NRF24_PA_PWR_0dBM); // Radio power
- 8000f18:	2003      	movs	r0, #3
+	nRF24_SetPALevel(NRF24_PA_PWR_M18dBM); // Radio power
+ 8000f18:	2000      	movs	r0, #0
  8000f1a:	f7ff fda5 	bl	8000a68 <nRF24_SetPALevel>
 	nRF24_SetDataRate(NRF24_RF_DR_250KBPS); // Data Rate
  8000f1e:	2002      	movs	r0, #2
