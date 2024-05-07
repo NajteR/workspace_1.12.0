@@ -1,0 +1,10 @@
+23:01:01 **** Incremental Build of configuration Debug for project nadajnikmani ****
+make -j12 all 
+arm-none-eabi-size   nadajnikmani.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13684	     20	   1764	  15468	   3c6c	nadajnikmani.elf
+Finished building: default.size.stdout
+ 
+
+23:01:01 Build Finished. 0 errors, 0 warnings. (took 397ms)
+

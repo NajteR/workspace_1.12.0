@@ -1,0 +1,10 @@
+10:01:20 **** Incremental Build of configuration Debug for project odbiorniknowymaly ****
+make -j12 all 
+arm-none-eabi-size   odbiorniknowymaly.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15464	     24	   1776	  17264	   4370	odbiorniknowymaly.elf
+Finished building: default.size.stdout
+ 
+
+10:01:21 Build Finished. 0 errors, 0 warnings. (took 316ms)
+

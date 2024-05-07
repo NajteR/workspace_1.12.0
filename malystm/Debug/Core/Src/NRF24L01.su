@@ -1,0 +1,13 @@
+../Core/Src/NRF24L01.c:24:6:CE_Enable	8	static
+../Core/Src/NRF24L01.c:30:6:CE_Disable	8	static
+../Core/Src/NRF24L01.c:36:6:CSN_Select	8	static
+../Core/Src/NRF24L01.c:42:6:CSN_UnSelect	8	static
+../Core/Src/NRF24L01.c:48:6:nrf_WriteRegSingle	24	static
+../Core/Src/NRF24L01.c:64:6:nrf_WriteRegMulti	24	static
+../Core/Src/NRF24L01.c:81:9:nrf_ReadRegSingle	24	static
+../Core/Src/NRF24L01.c:97:6:nrf_ReadRegMulti	16	static
+../Core/Src/NRF24L01.c:111:6:nrf_SendCmd	16	static
+../Core/Src/NRF24L01.c:122:6:nrf_reset	40	static
+../Core/Src/NRF24L01.c:168:6:nrf_Init	8	static
+../Core/Src/NRF24L01.c:199:6:nrf_TxMode	24	static
+../Core/Src/NRF24L01.c:223:9:nrf_Transmit	24	static

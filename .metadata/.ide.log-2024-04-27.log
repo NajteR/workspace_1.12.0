@@ -1,0 +1,56 @@
+2024-04-27 23:26:12,614 [INFO] Activator:176 - 
+
+
+2024-04-27 23:26:12,621 [INFO] Activator:177 - !SESSION log4j initialized
+2024-04-27 23:26:19,270 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-04-27 23:26:46,682 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-04-27 23:26:46,683 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-04-27 23:26:46,685 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-04-27 23:27:50,332 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-04-27 23:28:07,852 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-04-27 23:32:32,044 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Exception in thread "SWV client thread" java.lang.NullPointerException
+2024-04-27 23:32:32,046 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.debugTrace(SWVPlugin.java:85)
+2024-04-27 23:32:32,048 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.TRACE(SWVClient.java:768)
+2024-04-27 23:32:32,049 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.readByte(SWVClient.java:296)
+2024-04-27 23:32:32,051 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.getNextByte(SWVClient.java:277)
+2024-04-27 23:32:32,052 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.run(SWVClient.java:313)
+2024-04-27 23:32:44,701 [INFO] Activator:176 - 
+
+
+2024-04-27 23:32:44,703 [INFO] Activator:177 - !SESSION log4j initialized
+2024-04-27 23:32:49,966 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-04-27 23:33:15,621 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-04-27 23:33:15,621 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-04-27 23:33:15,624 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-04-27 23:34:33,294 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-04-27 23:34:37,471 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-04-27 23:34:59,689 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-04-27 23:35:14,117 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-04-27 23:38:59,982 [INFO] Activator:176 - 
+
+
+2024-04-27 23:38:59,984 [INFO] Activator:177 - !SESSION log4j initialized
+2024-04-27 23:39:05,370 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-04-27 23:39:31,108 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-04-27 23:39:31,108 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-04-27 23:39:31,110 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-04-27 23:58:15,580 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:15,581 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-27 23:58:16,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:16,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-27 23:58:17,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:17,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-27 23:58:18,562 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:18,562 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-27 23:58:19,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:19,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-27 23:58:20,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:20,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-27 23:58:21,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:21,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-27 23:58:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-27 23:58:23,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:23,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-04-27 23:58:24,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-04-27 23:58:24,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

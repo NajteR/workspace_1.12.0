@@ -1,0 +1,10 @@
+23:54:07 **** Incremental Build of configuration Debug for project mani_sterowanie_STM32 ****
+make -j12 all 
+arm-none-eabi-size   mani_sterowanie_STM32.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19776	    124	   1964	  21864	   5568	mani_sterowanie_STM32.elf
+Finished building: default.size.stdout
+ 
+
+23:54:07 Build Finished. 0 errors, 0 warnings. (took 371ms)
+

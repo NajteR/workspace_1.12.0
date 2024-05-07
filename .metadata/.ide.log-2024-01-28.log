@@ -1,0 +1,52 @@
+2024-01-28 10:17:25,700 [INFO] Activator:176 - 
+
+
+2024-01-28 10:17:25,712 [INFO] Activator:177 - !SESSION log4j initialized
+2024-01-28 10:17:32,719 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-01-28 10:18:01,836 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-01-28 10:18:01,836 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-01-28 10:18:01,839 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-01-28 10:47:34,970 [INFO] Activator:176 - 
+
+
+2024-01-28 10:47:34,972 [INFO] Activator:177 - !SESSION log4j initialized
+2024-01-28 10:47:39,433 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-01-28 10:48:05,226 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-01-28 10:48:05,227 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-01-28 10:48:05,229 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-01-28 13:44:57,570 [INFO] Activator:176 - 
+
+
+2024-01-28 13:44:57,573 [INFO] Activator:177 - !SESSION log4j initialized
+2024-01-28 13:45:02,161 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-01-28 13:45:23,961 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-01-28 13:45:23,962 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-01-28 13:45:23,964 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-01-28 16:20:11,145 [INFO] Activator:176 - 
+
+
+2024-01-28 16:20:11,148 [INFO] Activator:177 - !SESSION log4j initialized
+2024-01-28 16:20:16,991 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-01-28 16:20:40,433 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-01-28 16:20:40,433 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-01-28 16:20:40,435 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-01-28 17:51:41,735 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:41,735 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-01-28 17:51:42,678 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:42,678 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-01-28 17:51:43,694 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:43,694 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-01-28 17:51:44,707 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:44,707 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-01-28 17:51:45,688 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:45,688 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-01-28 17:51:46,699 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:46,699 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-01-28 17:51:47,698 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:47,698 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-01-28 17:51:48,689 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:48,689 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-01-28 17:51:49,717 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:49,717 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-01-28 17:51:50,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-01-28 17:51:50,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

@@ -1,0 +1,10 @@
+19:18:39 **** Incremental Build of configuration Debug for project malystm ****
+make -j12 all 
+arm-none-eabi-size   malystm.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9552	     44	   1732	  11328	   2c40	malystm.elf
+Finished building: default.size.stdout
+ 
+
+19:18:40 Build Finished. 0 errors, 0 warnings. (took 318ms)
+

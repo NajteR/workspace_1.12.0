@@ -1,0 +1,21 @@
+16:47:29 **** Incremental Build of configuration Debug for project nrfsalamonduzy ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/nRF24.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/nRF24.d" -MT"Core/Src/nRF24.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/nRF24.o"
+../Core/Src/nRF24.c: In function 'nRF24_ReceivePacket':
+../Core/Src/nRF24.c:485:1: warning: control reaches end of non-void function [-Wreturn-type]
+  485 | }
+      | ^
+arm-none-eabi-gcc -o "nrfsalamonduzy.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nrfsalamonduzy\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nrfsalamonduzy.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nrfsalamonduzy.elf
+ 
+arm-none-eabi-size   nrfsalamonduzy.elf 
+arm-none-eabi-objdump -h -S  nrfsalamonduzy.elf  > "nrfsalamonduzy.list"
+   text	   data	    bss	    dec	    hex	filename
+  16604	    120	   1800	  18524	   485c	nrfsalamonduzy.elf
+Finished building: default.size.stdout
+ 
+Finished building: nrfsalamonduzy.list
+ 
+
+16:47:30 Build Finished. 0 errors, 1 warnings. (took 948ms)
+

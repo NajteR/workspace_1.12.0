@@ -1,0 +1,395 @@
+2024-03-15 01:42:47,182 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-03-15 01:42:47,199 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-03-15 01:42:47,201 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-03-15 01:42:47,203 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-03-15 01:42:47,205 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-03-15 01:42:47,211 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WL.2.0.0
+2024-03-15 01:42:47,242 [WARN] PackLoader:240 - Cannot read IP mode file for WES.I-CUBE-Cesium.1.3.0
+2024-03-15 01:42:47,264 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.3.0
+2024-03-15 01:42:47,287 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.21.4
+2024-03-15 01:42:47,309 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.3.0
+2024-03-15 01:42:47,362 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G0.1.1.0
+2024-03-15 01:42:47,392 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.3.0.0
+2024-03-15 01:42:47,422 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.3.0.0
+2024-03-15 01:42:47,444 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2024-03-15 01:42:47,468 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.5.1.0
+2024-03-15 01:42:47,538 [WARN] PackLoader:240 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.3.1
+2024-03-15 01:42:47,643 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.6.0.0
+2024-03-15 01:42:47,732 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2024-03-15 01:42:47,755 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.5.6.0
+2024-03-15 01:42:47,802 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.2.0.0
+2024-03-15 01:42:47,908 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.6.0
+2024-03-15 01:42:48,155 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.4.2.0
+2024-03-15 01:42:48,184 [WARN] PackLoader:240 - Cannot read IP mode file for ITTIA_DB.I-CUBE-ITTIADB.8.8.0
+2024-03-15 01:42:48,208 [WARN] PackLoader:240 - Cannot read IP mode file for emotas.I-CUBE-CANOPEN.1.1.3
+2024-03-15 01:42:48,234 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.2.0.0
+2024-03-15 01:42:48,281 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,282 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,287 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.1.0
+2024-03-15 01:42:48,289 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,290 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,291 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,292 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,292 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,319 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.1
+2024-03-15 01:42:48,343 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.0
+2024-03-15 01:42:48,371 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC6.3.0.0
+2024-03-15 01:42:48,400 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.4.1.0
+2024-03-15 01:42:48,425 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.8.1.0
+2024-03-15 01:42:48,504 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-03-15 01:42:48,505 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.2.0.0
+2024-03-15 01:42:48,508 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-03-15 01:42:48,509 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-03-15 01:42:48,510 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-03-15 01:42:48,547 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0
+2024-03-15 01:42:48,574 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.1.1.0
+2024-03-15 01:42:48,626 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,626 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,632 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.2.0.0
+2024-03-15 01:42:48,634 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,634 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,635 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,636 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,636 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-03-15 01:42:48,663 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.0.1
+2024-03-15 01:42:48,717 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.1.1.0
+2024-03-15 01:42:48,745 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.8.0.1
+2024-03-15 01:42:48,784 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.5.0.0
+2024-03-15 01:42:48,840 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.3.1
+2024-03-15 01:42:48,920 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0
+2024-03-15 01:42:48,964 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.3.0
+2024-03-15 01:42:49,045 [WARN] PackLoader:240 - Cannot read IP mode file for Infineon.AIROC-Wi-Fi-Bluetooth-STM32.1.5.1
+2024-03-15 01:42:49,082 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENVWB1.1.3.0
+2024-03-15 01:42:49,112 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENVWB1.1.3.1
+2024-03-15 01:42:49,196 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.2.0.0
+2024-03-15 01:42:49,306 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.10.0.0
+2024-03-15 01:42:49,583 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.1.0
+2024-03-15 01:42:49,618 [WARN] PackLoader:240 - Cannot read IP mode file for portGmbH.I-Cube-SoM-uGOAL.1.1.0
+2024-03-15 01:42:49,648 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALS.1.0.1
+2024-03-15 01:42:49,697 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.1.1.0
+2024-03-15 01:42:49,719 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.2.0.0
+2024-03-15 01:42:49,747 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.4.0
+2024-03-15 01:42:49,793 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.4.1
+2024-03-15 01:42:49,860 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.2.0
+2024-03-15 01:42:49,865 [INFO] ThirdParty:978 - Integrity check success = true
+2024-03-15 01:42:49,866 [INFO] IntegrityCheckThread:100 - exiting critical section [integrity check]
+2024-03-15 01:42:49,866 [INFO] IntegrityCheckThread:103 - End integrity checks thread
+2024-03-15 01:42:49,866 [INFO] ThirdParty:873 - entering critical section [close project]
+2024-03-15 01:42:49,868 [INFO] ThirdParty:883 - exiting critical section [close project]
+2024-03-15 01:42:49,878 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2024-03-15 01:42:49,890 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 553207888 Bytes (725614592)
+2024-03-15 01:42:49,893 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-03-15 01:42:49,894 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.81
+2024-03-15 01:42:49,894 [INFO] OpenFileManager:308 - Change cursor
+2024-03-15 01:42:49,987 [INFO] Mcu:1937 - Initializing MCU STM32L152RETx STM32L152RETx STM32L152RET6
+2024-03-15 01:42:53,246 [INFO] Context:659 - Trying to add GPIOservice into a context  which must be forbidden
+2024-03-15 01:42:54,594 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2024-03-15 01:42:54,595 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2024-03-15 01:42:54,595 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2024-03-15 01:42:54,596 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2024-03-15 01:42:54,597 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2024-03-15 01:42:54,652 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,653 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,653 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,653 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,653 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,653 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,653 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,654 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,654 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,654 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,655 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,655 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,655 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,655 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,655 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,655 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,655 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,656 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,656 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,656 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,656 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,656 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,656 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,656 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,656 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,657 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,657 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,657 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,657 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,657 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,657 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,657 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,657 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-15 01:42:54,864 [INFO] ThirdPartyModel:298 - Start build external matchings
+2024-03-15 01:42:56,554 [INFO] ThirdPartyModel:316 - End build external matchings
+2024-03-15 01:42:56,644 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2024-03-15 01:42:56,650 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2024-03-15 01:42:56,650 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIMFreq_Value)
+2024-03-15 01:42:56,650 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (USBOutput)
+2024-03-15 01:42:57,020 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 629928440 Bytes (725614592)
+2024-03-15 01:42:57,251 [INFO] ApiDb:581 - Connected to CubeFinder SQLite database (C:\Users\marci\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2024-03-15 01:42:57,480 [INFO] ApiDb:668 - CubeFinder database Data Model version=2.1
+2024-03-15 01:42:57,481 [INFO] ApiDb:669 - CubeFinder database Configuration version=3.0.39
+2024-03-15 01:42:57,481 [INFO] ApiDb:670 - CubeFinder database generation date=2024-01-11 (1704964531)
+2024-03-15 01:42:57,482 [INFO] ApiDb:671 - CubeFinder database FW Pack versions=[FP-ATR-ASTRA1_V2.0.0, FP-SNS-FLIGHT1_V5.0.1, FP-SNS-FLIGHT1_V5.0.2, FP-SNS-MOTENV1_V4.3.1, FP-SNS-MOTENV1_V4.3.2, FP-SNS-MOTENVWB1_V1.3.1, FP-SNS-SMARTAG2_V1.2.0, STM32Cube_FW_C0_V1.1.0, STM32Cube_FW_F4_V1.28.0, STM32Cube_FW_F7_V1.17.0, STM32Cube_FW_G0_V1.6.2, STM32Cube_FW_G4_V1.5.2, STM32Cube_FW_H5_V0.5.1, STM32Cube_FW_H5_V1.1.1, STM32Cube_FW_H5_V1.2.0RC2, STM32Cube_FW_H7_V1.11.0, STM32Cube_FW_L0_V1.12.2, STM32Cube_FW_L5_V1.5.0, STM32Cube_FW_U5_V1.3.0RC4, STM32Cube_FW_U5_V1.4.0, STM32Cube_FW_WBA_V1.0.0RC1, STM32Cube_FW_WBA_V1.1.0RC1, STM32Cube_FW_WBA_V1.2.0, STM32Cube_FW_WBA_V1.2.0RC2, STM32Cube_FW_WB_V1.15.0RC1, STM32Cube_FW_WB_V1.16.0, STM32Cube_FW_WB_V1.16.0RC2, STM32Cube_FW_WB_V1.18.0, STM32Cube_FW_WL_V1.3.0, X-CUBE-ALGOBUILD_V1.3.0, X-CUBE-ALS_V1.0.1, X-CUBE-AZRTOS-F4_V1.1.0, X-CUBE-AZRTOS-F7_V1.1.0, X-CUBE-AZRTOS-G0_V1.1.0, X-CUBE-AZRTOS-G4_V2.0.0, X-CUBE-AZRTOS-H7_V3.2.0, X-CUBE-AZRTOS-L4_V1.0.0, X-CUBE-AZRTOS-L4_V2.0.0, X-CUBE-AZRTOS-L5_V1.1.0, X-CUBE-AZRTOS-WB_V2.0.0, X-CUBE-AZRTOS-WL_V2.0.0, X-CUBE-BLE1_V7.0.0, X-CUBE-BLE2_V3.3.0, X-CUBE-BLEMGR_V3.0.0, X-CUBE-EEPRMA1_V4.1.0, X-CUBE-EEPRMA1_V4.2.0, X-CUBE-FREERTOS_V1.1.0, X-CUBE-GNSS1_V6.0.0, X-CUBE-MEMS1_V10.0.0, X-CUBE-MEMS1_V9.1.0, X-CUBE-MEMS1_V9.4.0, X-CUBE-MEMS1_V9.6.0, X-CUBE-NFC4_V3.0.0, X-CUBE-NFC7_V1.0.1, X-CUBE-SFXS2LP1_V4.0.0, X-CUBE-SUBG2_V5.0.0, X-CUBE-TOF1_V3.4.0]
+2024-03-15 01:43:03,409 [INFO] ApiDb:240 - Found 297 in-development CPN: [B-G473E-ZEST1S, B-WB1M-WPAN1, B-WL5M-SUBG1, NUCLEO-C031C6, NUCLEO-H503RB, NUCLEO-H563ZI, NUCLEO-U545RE-Q, NUCLEO-U5A5ZJ-Q, NUCLEO-WBA52CG, STEVAL-PROTEUS1, STEVAL-STWINBX1, STM320518-EVAL, STM32C0116-DK, STM32C011D6Y3TR, STM32C011D6Y6TR, STM32C011F4P3, STM32C011F4P6, STM32C011F4U3, STM32C011F4U6TR, STM32C011F6P3, STM32C011F6P6, STM32C011F6U3, STM32C011F6U6TR, STM32C011J4M3, STM32C011J4M6, STM32C011J6M3, STM32C011J6M6, STM32C0316-DK, STM32C031C4T3, STM32C031C4T6, STM32C031C4U3, STM32C031C4U6, STM32C031C6T3, STM32C031C6T6, STM32C031C6U3, STM32C031C6U6, STM32C031F4P3, STM32C031F4P6, STM32C031F6P3, STM32C031F6P6, STM32C031G4U3, STM32C031G4U6, STM32C031G6U3, STM32C031G6U6, STM32C031K4T3, STM32C031K4T6, STM32C031K4U3, STM32C031K4U6, STM32C031K6T3, STM32C031K6T6, STM32C031K6U3, STM32C031K6U6, STM32G071K8TXN, STM32G071K8UXN, STM32G081GBU6N, STM32G081KBT6N, STM32G081KBUXN, STM32G0B1CCT6N, STM32G0B1KCT6, STM32G0B1NEY6TR, STM32G0B1RCT6N, STM32G0C1CCT6, STM32G0C1CCT6N, STM32G0C1CCU6N, STM32G0C1CET6N, STM32G0C1CEU6N, STM32G0C1KCT6, STM32G0C1NEY6TR, STM32G0C1RCI6N, STM32G0C1RCT6N, STM32G0C1REI6N, STM32G0C1RET6N, STM32G0C1VCI6, STM32G0C1VEI6, STM32G471CCT6, STM32G471CCU6, STM32G471CET3, STM32G471CET6, STM32G471CEU3, STM32G471CEU6, STM32G471MCT6, STM32G471MET3, STM32G471MET6, STM32G471MEY6TR, STM32G471QCT6, STM32G471QET3, STM32G471RCT6, STM32G471RET3, STM32G471RET6, STM32G471VCH6, STM32G471VCI6, STM32G471VCT6, STM32G471VEH3, STM32G471VEH6, STM32G471VEI3, STM32G471VEI6, STM32G471VET3, STM32G471VET6, STM32G474CCT6, STM32H503CBT6, STM32H503CBU6, STM32H503EBY6TR, STM32H503KBU6, STM32H503RBT6, STM32H562AGI6, STM32H562AII6, STM32H562IGK6, STM32H562IGT6, STM32H562IIK6, STM32H562IIT6, STM32H562RGT6, STM32H562RGV6, STM32H562RIT6, STM32H562RIV6, STM32H562VGT6, STM32H562VIT6, STM32H562ZGT6, STM32H562ZIT6, STM32H563AGI6, STM32H563AII3Q, STM32H563AII6, STM32H563IGK6, STM32H563IGT6, STM32H563IIK3Q, STM32H563IIK6, STM32H563IIT3Q, STM32H563IIT6, STM32H563MIY3QTR, STM32H563RGT6, STM32H563RGV6, STM32H563RIT6, STM32H563RIV6, STM32H563VGT6, STM32H563VIT3Q, STM32H563VIT6, STM32H563ZGT6, STM32H563ZIT3Q, STM32H563ZIT6, STM32H573AII3Q, STM32H573AII6, STM32H573I-DK, STM32H573IIK3Q, STM32H573IIK6, STM32H573IIT3Q, STM32H573IIT6, STM32H573MIY3QTR, STM32H573RIT6, STM32H573RIV6, STM32H573VIT3Q, STM32H573VIT6, STM32H573ZIT3Q, STM32H573ZIT6, STM32L4R5QGI6STR, STM32MP131AAE3, STM32MP131AAF3, STM32MP131AAG3, STM32MP131CAE3, STM32MP131CAF3, STM32MP131CAG3, STM32MP131DAE7, STM32MP131DAF7, STM32MP131DAG7, STM32MP131FAE7, STM32MP131FAF7, STM32MP131FAG7, STM32MP133AAE3, STM32MP133AAF3, STM32MP133AAG3, STM32MP133CAE3, STM32MP133CAF3, STM32MP133CAG3, STM32MP133DAE7, STM32MP133DAF7, STM32MP133DAG7, STM32MP133FAE7, STM32MP133FAF7, STM32MP133FAG7, STM32MP135AAE3, STM32MP135AAF3, STM32MP135AAG3, STM32MP135CAE3, STM32MP135CAF3, STM32MP135CAG3, STM32MP135DAE7, STM32MP135DAF7, STM32MP135DAG7, STM32MP135F-DK, STM32MP135FAE7, STM32MP135FAF7, STM32MP135FAF7T, STM32MP135FAF7U, STM32MP135FAG7, STM32U535CBT6, STM32U535CBT6Q, STM32U535CBU6, STM32U535CBU6Q, STM32U535CCT6, STM32U535CCT6Q, STM32U535CCU6, STM32U535CCU6Q, STM32U535CET6, STM32U535CET6Q, STM32U535CEU6, STM32U535CEU6Q, STM32U535JEY6QTR, STM32U535NCY6QTR, STM32U535NEY6QTR, STM32U535RBI6, STM32U535RBI6Q, STM32U535RBT6, STM32U535RBT6Q, STM32U535RCI6, STM32U535RCI6Q, STM32U535RCT6, STM32U535RCT6Q, STM32U535REI6, STM32U535REI6Q, STM32U535RET6, STM32U535RET6Q, STM32U535VCI6, STM32U535VCI6Q, STM32U535VCT6, STM32U535VCT6Q, STM32U535VEI6, STM32U535VEI6Q, STM32U535VET6, STM32U535VET6Q, STM32U545CET6, STM32U545CET6Q, STM32U545CEU6, STM32U545CEU6Q, STM32U545JEY6QTR, STM32U545NEY6QTR, STM32U545REI6, STM32U545REI6Q, STM32U545RET6, STM32U545RET6Q, STM32U545VEI6, STM32U545VEI6Q, STM32U545VET6, STM32U545VET6Q, STM32U595AIH6, STM32U595AIH6Q, STM32U595AJH6, STM32U595AJH6Q, STM32U595QII6, STM32U595QII6Q, STM32U595QJI6, STM32U595QJI6Q, STM32U595RIT6, STM32U595RIT6Q, STM32U595RJT6, STM32U595RJT6Q, STM32U595VIT6, STM32U595VIT6Q, STM32U595VJT6, STM32U595VJT6Q, STM32U595ZIT6, STM32U595ZIT6Q, STM32U595ZIY6QTR, STM32U595ZJT6, STM32U595ZJT6Q, STM32U595ZJY6QTR, STM32U599BJY6QTR, STM32U599NIH6Q, STM32U599NJH6Q, STM32U599VIT6Q, STM32U599VJT6, STM32U599VJT6Q, STM32U599ZIT6Q, STM32U599ZIY6QTR, STM32U599ZJT6Q, STM32U599ZJY6QTR, STM32U5A5AJH6, STM32U5A5AJH6Q, STM32U5A5QJI6, STM32U5A5QJI6Q, STM32U5A5RJT6, STM32U5A5RJT6Q, STM32U5A5VJT6, STM32U5A5VJT6Q, STM32U5A5ZJT6, STM32U5A5ZJT6Q, STM32U5A5ZJY6QTR, STM32U5A9BJY6QTR, STM32U5A9J-DK, STM32U5A9NJH6Q, STM32U5A9VJT6Q, STM32U5A9ZJT6Q, STM32U5A9ZJY6QTR, STM32WB1MMCH6, STM32WBA52CEU6, STM32WBA52CEU6T, STM32WBA52CGU6, STM32WBA52CGU6T, STM32WL5MOCH6, STM32WL5MOCH6TR]
+2024-03-15 01:43:03,415 [INFO] DbMcus:216 - Found 3861 MCUs, 3861 are supported
+2024-03-15 01:43:03,420 [INFO] ApiDb:423 - Load user favorites file C:\Users\marci/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2024-03-15 01:43:03,421 [INFO] ApiDb:427 - User favorites MCUs=[]
+2024-03-15 01:43:03,421 [INFO] DbMcus:222 - Set 0 / 0 favorites MCUs
+2024-03-15 01:43:04,393 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2024-03-15 01:43:04,393 [INFO] ThirdParty:835 - entering critical section [change project]
+2024-03-15 01:43:04,393 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2024-03-15 01:43:04,393 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2024-03-15 01:43:04,393 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2024-03-15 01:43:04,393 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2024-03-15 01:43:04,393 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2024-03-15 01:43:04,394 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2024-03-15 01:43:04,394 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.6.0
+2024-03-15 01:43:04,394 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2024-03-15 01:43:04,394 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2024-03-15 01:43:04,394 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.1
+2024-03-15 01:43:04,394 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.23.0
+2024-03-15 01:43:04,394 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2024-03-15 01:43:04,395 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.4
+2024-03-15 01:43:04,395 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2024-03-15 01:43:04,395 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2024-03-15 01:43:04,395 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.6.0
+2024-03-15 01:43:04,395 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.2.0
+2024-03-15 01:43:04,396 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.8.0
+2024-03-15 01:43:04,396 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2024-03-15 01:43:04,396 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.1
+2024-03-15 01:43:04,396 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.1
+2024-03-15 01:43:04,396 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2024-03-15 01:43:04,396 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2024-03-15 01:43:04,397 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2024-03-15 01:43:04,397 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2024-03-15 01:43:04,397 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2024-03-15 01:43:04,397 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.1.3
+2024-03-15 01:43:04,397 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 2.0.0
+2024-03-15 01:43:04,399 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.1
+2024-03-15 01:43:04,399 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2024-03-15 01:43:04,399 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2024-03-15 01:43:04,400 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2024-03-15 01:43:04,400 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2024-03-15 01:43:04,400 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2024-03-15 01:43:04,400 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2024-03-15 01:43:04,400 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.1
+2024-03-15 01:43:04,400 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2024-03-15 01:43:04,401 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2024-03-15 01:43:04,401 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.1.0
+2024-03-15 01:43:04,401 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.0
+2024-03-15 01:43:04,401 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.5.1
+2024-03-15 01:43:04,402 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.0.0
+2024-03-15 01:43:04,402 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2024-03-15 01:43:04,402 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2024-03-15 01:43:04,402 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.3.0
+2024-03-15 01:43:04,403 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.3.1
+2024-03-15 01:43:04,403 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2024-03-15 01:43:04,403 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2024-03-15 01:43:04,403 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.0.0
+2024-03-15 01:43:04,404 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
+2024-03-15 01:43:04,404 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2024-03-15 01:43:04,404 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2024-03-15 01:43:04,404 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 10.0.0
+2024-03-15 01:43:04,404 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.1.0
+2024-03-15 01:43:04,405 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.0
+2024-03-15 01:43:04,405 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2024-03-15 01:43:04,405 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2024-03-15 01:43:04,405 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.0
+2024-03-15 01:43:04,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.1
+2024-03-15 01:43:04,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.0.0
+2024-03-15 01:43:04,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.1.0
+2024-03-15 01:43:04,406 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2024-03-15 01:43:04,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2024-03-15 01:43:04,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.1.0
+2024-03-15 01:43:04,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2024-03-15 01:43:04,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2024-03-15 01:43:04,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2024-03-15 01:43:04,407 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2024-03-15 01:43:04,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2024-03-15 01:43:04,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2024-03-15 01:43:04,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2024-03-15 01:43:04,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2024-03-15 01:43:04,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2024-03-15 01:43:04,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2024-03-15 01:43:04,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2024-03-15 01:43:04,408 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2024-03-15 01:43:04,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2024-03-15 01:43:04,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2024-03-15 01:43:04,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.0
+2024-03-15 01:43:04,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.1
+2024-03-15 01:43:04,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.2.0
+2024-03-15 01:43:04,409 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2024-03-15 01:43:04,409 [INFO] ThirdParty:841 - exiting critical section [change project]
+2024-03-15 01:43:05,369 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2024-03-15 01:43:05,371 [INFO] PinOutPanel:1499 - setPackage(STM32L152RETx,LQFP64)
+2024-03-15 01:43:06,464 [INFO] UtilMem:75 - Before build in PCC Used Memory: 626137112 Bytes (725614592)
+2024-03-15 01:43:08,158 [INFO] UtilMem:75 - After build in PCC Used Memory: 627861400 Bytes (725614592)
+2024-03-15 01:43:08,232 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,233 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,233 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,233 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,233 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,234 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,234 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,234 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,234 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,235 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,235 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,235 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,236 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,236 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,237 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,237 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,238 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,238 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,239 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,240 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,240 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,241 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,241 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,242 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,242 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,243 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,244 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,244 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,245 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,245 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,246 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,247 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,247 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,248 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,249 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,250 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,251 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,251 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,252 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,253 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,254 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,255 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,256 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-15 01:43:08,687 [INFO] CADModel:165 - CPN selected for project levelSTM32L152RET6
+2024-03-15 01:43:08,687 [INFO] CADModel:114 - Register for checkConnection events
+2024-03-15 01:43:08,740 [INFO] OpenFileManager:328 - Restore cursor
+2024-03-15 13:46:21,765 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:21,781 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:22,704 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:22,704 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:23,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:23,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:24,725 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:24,725 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:25,714 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:25,714 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:26,703 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:26,703 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:27,728 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:27,728 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:28,720 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:28,720 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:29,729 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:29,729 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:30,736 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:30,738 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:31,715 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:31,715 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:32,707 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:32,707 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:33,726 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:33,726 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:34,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:34,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:35,711 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:35,711 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:36,724 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:36,724 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:37,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:37,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:38,738 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:38,738 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:39,728 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:39,728 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:40,704 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:40,704 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:41,713 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:41,713 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:42,729 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:42,729 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:43,717 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:43,717 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:44,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:44,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:45,725 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:45,725 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:46,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:46,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:47,726 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:47,726 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:48,712 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:48,712 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:49,717 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:49,717 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:50,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:50,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:51,734 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:51,734 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:52,706 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:52,716 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:53,704 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:53,704 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:54,725 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:54,725 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:55,712 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:55,712 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:56,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:56,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:57,724 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:57,724 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:58,717 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:58,717 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:46:59,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:46:59,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:00,727 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:00,727 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:01,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:01,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:02,733 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:02,733 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:03,727 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:03,727 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:04,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:04,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:05,703 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:05,703 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:06,724 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:06,724 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:07,716 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:07,716 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:08,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:08,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:09,724 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:09,724 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:10,722 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:10,722 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:11,727 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:11,727 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:12,725 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:12,725 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:13,723 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:13,723 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:14,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:14,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:15,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:15,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:16,715 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:16,715 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:17,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:17,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:18,723 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:18,723 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:19,715 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:19,715 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-03-15 13:47:20,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-03-15 13:47:20,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

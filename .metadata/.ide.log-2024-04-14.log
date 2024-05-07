@@ -1,0 +1,55 @@
+2024-04-15 00:21:04,117 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-15 00:21:13,263 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-15 00:21:16,003 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-04-15 00:21:17,171 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 604913504 Bytes (689963008)
+2024-04-15 00:21:18,601 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 619566096 Bytes (689963008)
+2024-04-15 00:21:21,129 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 625807424 Bytes (689963008)
+2024-04-15 00:21:21,825 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-04-15 00:21:21,825 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-15 00:21:21,825 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-04-15 00:21:21,826 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8L1Cat345
+2024-04-15 00:21:21,826 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8L1Cat345
+2024-04-15 00:21:21,826 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8L1Cat345
+2024-04-15 00:21:21,826 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-15 00:21:21,826 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-15 00:21:21,826 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-15 00:21:21,828 [INFO] CodeGenerator:793 - code generatio: config db path: D:\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\
+2024-04-15 00:21:22,316 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\MXTmpFiles\license.tmp_save
+2024-04-15 00:21:22,767 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\MXTmpFiles\license.tmp
+2024-04-15 00:21:22,969 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\gpio.c_save
+2024-04-15 00:21:23,141 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\gpio.c
+2024-04-15 00:21:23,163 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\gpio.h_save
+2024-04-15 00:21:23,291 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\gpio.h
+2024-04-15 00:21:23,912 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\spi.c_save
+2024-04-15 00:21:24,075 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\spi.c
+2024-04-15 00:21:24,098 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\spi.h_save
+2024-04-15 00:21:24,201 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\spi.h
+2024-04-15 00:21:24,225 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\tim.c_save
+2024-04-15 00:21:24,419 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\tim.c
+2024-04-15 00:21:24,432 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\tim.h_save
+2024-04-15 00:21:24,535 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\tim.h
+2024-04-15 00:21:24,571 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\usart.c_save
+2024-04-15 00:21:24,694 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\usart.c
+2024-04-15 00:21:24,701 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\usart.h_save
+2024-04-15 00:21:24,795 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\usart.h
+2024-04-15 00:21:24,825 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\stm32l1xx_it.c_save
+2024-04-15 00:21:24,949 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\stm32l1xx_it.c
+2024-04-15 00:21:24,970 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\stm32l1xx_it.h_save
+2024-04-15 00:21:25,097 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\stm32l1xx_it.h
+2024-04-15 00:21:25,138 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\stm32l1xx_hal_msp.c_save
+2024-04-15 00:21:25,281 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\stm32l1xx_hal_msp.c
+2024-04-15 00:21:25,295 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\MXTmpFiles\system.tmp_save
+2024-04-15 00:21:25,408 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\MXTmpFiles\system.tmp
+2024-04-15 00:21:25,445 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\stm32l1xx_hal_conf.h_save
+2024-04-15 00:21:25,569 [INFO] CodeEngine:335 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\stm32l1xx_hal_conf.h
+2024-04-15 00:21:25,640 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\main.h_save
+2024-04-15 00:21:25,762 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Inc\main.h
+2024-04-15 00:21:25,787 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\main.c_save
+2024-04-15 00:21:25,968 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\Core\Src\main.c
+2024-04-15 00:21:26,602 [INFO] ProjectBuilder:2996 - Time for Copy HAL[2] : 1mS.
+2024-04-15 00:21:26,621 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2024-04-15 00:21:26,967 [INFO] ConfigFileManager:1483 - The Die is : DIE437
+2024-04-15 00:21:26,996 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2024-04-15 00:21:27,035 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2024-04-15 00:21:27,274 [INFO] ApiDbMcu:507 - Load IP Config File for TOUCHSENSING
+2024-04-15 00:21:27,310 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE

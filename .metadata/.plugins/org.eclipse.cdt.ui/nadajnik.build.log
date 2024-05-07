@@ -1,0 +1,16 @@
+18:25:42 **** Build of configuration Debug for project nadajnik ****
+make -j12 all 
+arm-none-eabi-gcc -o "nadajnik.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nadajnik\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nadajnik.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nadajnik.elf
+ 
+arm-none-eabi-size   nadajnik.elf 
+arm-none-eabi-objdump -h -S  nadajnik.elf  > "nadajnik.list"
+   text	   data	    bss	    dec	    hex	filename
+  12548	     20	   1740	  14308	   37e4	nadajnik.elf
+Finished building: default.size.stdout
+ 
+Finished building: nadajnik.list
+ 
+
+18:25:43 Build Finished. 0 errors, 0 warnings. (took 822ms)
+
