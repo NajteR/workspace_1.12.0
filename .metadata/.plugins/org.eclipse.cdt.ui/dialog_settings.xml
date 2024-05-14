@@ -20,4 +20,14 @@
 		<item key="size.width" value="528"/>
 		<item key="size.height" value="180"/>
 	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="true"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="_weak*Callback"/>
+			<item value="_weak*callback*"/>
+			<item value="_weak*call"/>
+			<item value="_weak*callback"/>
+		</list>
+	</section>
 </section>

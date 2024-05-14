@@ -24,5 +24,10 @@
 	<section name="BasicNewProjectResourceWizard">
 	</section>
 	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="com.st.stm32cube.common.projectcreation.ui.stm32projectfromiocwizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="com.st.stm32cube.common.projectcreation.ui.category"/>
+		</list>
 	</section>
 </section>

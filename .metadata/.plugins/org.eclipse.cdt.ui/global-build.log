@@ -1,18 +1,18 @@
-20:09:33 **** Incremental Build of configuration Debug for project odbiornikManipulator ****
+18:14:18 **** Incremental Build of configuration Debug for project nadajnikmaniV2 ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Device/ST/STM32L1xx/Include -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:153:25: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
-  153 |   nRF24_SetRXAddress(0, "Odb");
-      |                         ^~~~~
-      |                         |
-      |                         char *
+../Core/Src/main.c:101:24: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  101 |   nRF24_SetRXAddress(0,"Nad");
+      |                        ^~~~~
+      |                        |
+      |                        char *
 In file included from ../Core/Src/main.c:29:
 ../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
    36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
       |                                       ~~~~~~~~~^~~~~~~
-../Core/Src/main.c:154:22: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
-  154 |   nRF24_SetTXAddress("Nad");
+../Core/Src/main.c:102:22: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  102 |   nRF24_SetTXAddress("Odb");
       |                      ^~~~~
       |                      |
       |                      char *
@@ -20,39 +20,161 @@ In file included from ../Core/Src/main.c:29:
 ../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
    37 | void nRF24_SetTXAddress(uint8_t* address);
       |                         ~~~~~~~~~^~~~~~~
-../Core/Src/main.c:205:27: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
-  205 |     nRF24_SetRXAddress(0, "Odb");
-      |                           ^~~~~
-      |                           |
-      |                           char *
-In file included from ../Core/Src/main.c:29:
-../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
-      |                                       ~~~~~~~~~^~~~~~~
-../Core/Src/main.c:206:24: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
-  206 |     nRF24_SetTXAddress("Nad");
+arm-none-eabi-gcc -o "nadajnikmaniV2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nadajnikmaniV2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nadajnikmaniV2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nadajnikmaniV2.elf
+ 
+arm-none-eabi-size   nadajnikmaniV2.elf 
+arm-none-eabi-objdump -h -S  nadajnikmaniV2.elf  > "nadajnikmaniV2.list"
+   text	   data	    bss	    dec	    hex	filename
+  16856	     20	   1892	  18768	   4950	nadajnikmaniV2.elf
+Finished building: default.size.stdout
+ 
+Finished building: nadajnikmaniV2.list
+ 
+18:14:43 **** Incremental Build of configuration Debug for project nadajnikmaniV2 ****
+make -j12 all 
+arm-none-eabi-size   nadajnikmaniV2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16856	     20	   1892	  18768	   4950	nadajnikmaniV2.elf
+Finished building: default.size.stdout
+ 
+18:17:18 **** Incremental Build of configuration Debug for project nadajnikmaniV2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Device/ST/STM32L1xx/Include -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/nRF24.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Device/ST/STM32L1xx/Include -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/nRF24.d" -MT"Core/Src/nRF24.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/nRF24.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:24: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  101 |   nRF24_SetRXAddress(0,"Nad");
       |                        ^~~~~
       |                        |
       |                        char *
 In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:102:22: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  102 |   nRF24_SetTXAddress("Odb");
+      |                      ^~~~~
+      |                      |
+      |                      char *
+In file included from ../Core/Src/main.c:29:
 ../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
    37 | void nRF24_SetTXAddress(uint8_t* address);
       |                         ~~~~~~~~~^~~~~~~
-arm-none-eabi-gcc -o "odbiornikManipulator.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikManipulator\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="odbiornikManipulator.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: odbiornikManipulator.elf
+arm-none-eabi-gcc -o "nadajnikmaniV2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nadajnikmaniV2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nadajnikmaniV2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nadajnikmaniV2.elf
  
-arm-none-eabi-size   odbiornikManipulator.elf 
-arm-none-eabi-objdump -h -S  odbiornikManipulator.elf  > "odbiornikManipulator.list"
+arm-none-eabi-size   nadajnikmaniV2.elf 
+arm-none-eabi-objdump -h -S  nadajnikmaniV2.elf  > "nadajnikmaniV2.list"
    text	   data	    bss	    dec	    hex	filename
-  20280	     24	   1984	  22288	   5710	odbiornikManipulator.elf
+  16856	     20	   1884	  18760	   4948	nadajnikmaniV2.elf
 Finished building: default.size.stdout
  
-Finished building: odbiornikManipulator.list
+Finished building: nadajnikmaniV2.list
  
-20:10:55 **** Incremental Build of configuration Debug for project odbiornikManipulator ****
+18:19:08 **** Incremental Build of configuration Debug for project nadajnikmaniV2 ****
 make -j12 all 
-arm-none-eabi-size   odbiornikManipulator.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Device/ST/STM32L1xx/Include -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:24: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  101 |   nRF24_SetRXAddress(0,"Nad");
+      |                        ^~~~~
+      |                        |
+      |                        char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:102:22: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  102 |   nRF24_SetTXAddress("Odb");
+      |                      ^~~~~
+      |                      |
+      |                      char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   37 | void nRF24_SetTXAddress(uint8_t* address);
+      |                         ~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "nadajnikmaniV2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nadajnikmaniV2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nadajnikmaniV2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nadajnikmaniV2.elf
+ 
+arm-none-eabi-size   nadajnikmaniV2.elf 
+arm-none-eabi-objdump -h -S  nadajnikmaniV2.elf  > "nadajnikmaniV2.list"
    text	   data	    bss	    dec	    hex	filename
-  20280	     24	   1984	  22288	   5710	odbiornikManipulator.elf
+  16856	     20	   1892	  18768	   4950	nadajnikmaniV2.elf
+Finished building: default.size.stdout
+ 
+Finished building: nadajnikmaniV2.list
+ 
+18:24:30 **** Incremental Build of configuration Debug for project nadajnikmaniV2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Device/ST/STM32L1xx/Include -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:24: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  101 |   nRF24_SetRXAddress(0,"Nad");
+      |                        ^~~~~
+      |                        |
+      |                        char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:102:22: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  102 |   nRF24_SetTXAddress("Odb");
+      |                      ^~~~~
+      |                      |
+      |                      char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   37 | void nRF24_SetTXAddress(uint8_t* address);
+      |                         ~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "nadajnikmaniV2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nadajnikmaniV2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nadajnikmaniV2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nadajnikmaniV2.elf
+ 
+arm-none-eabi-size   nadajnikmaniV2.elf 
+arm-none-eabi-objdump -h -S  nadajnikmaniV2.elf  > "nadajnikmaniV2.list"
+   text	   data	    bss	    dec	    hex	filename
+  16856	     20	   1892	  18768	   4950	nadajnikmaniV2.elf
+Finished building: default.size.stdout
+ 
+Finished building: nadajnikmaniV2.list
+ 
+18:28:47 **** Incremental Build of configuration Debug for project nadajnikmaniV2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Device/ST/STM32L1xx/Include -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:24: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  101 |   nRF24_SetRXAddress(0,"Nad");
+      |                        ^~~~~
+      |                        |
+      |                        char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:102:22: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  102 |   nRF24_SetTXAddress("Odb");
+      |                      ^~~~~
+      |                      |
+      |                      char *
+In file included from ../Core/Src/main.c:29:
+../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   37 | void nRF24_SetTXAddress(uint8_t* address);
+      |                         ~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "nadajnikmaniV2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nadajnikmaniV2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nadajnikmaniV2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nadajnikmaniV2.elf
+ 
+arm-none-eabi-size   nadajnikmaniV2.elf 
+arm-none-eabi-objdump -h -S  nadajnikmaniV2.elf  > "nadajnikmaniV2.list"
+   text	   data	    bss	    dec	    hex	filename
+  16856	     20	   1892	  18768	   4950	nadajnikmaniV2.elf
+Finished building: default.size.stdout
+ 
+Finished building: nadajnikmaniV2.list
+ 
+19:41:34 **** Build of configuration Debug for project nadajnikmani ****
+make -j12 all 
+arm-none-eabi-size   nadajnikmani.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13684	     20	   1764	  15468	   3c6c	nadajnikmani.elf
 Finished building: default.size.stdout
  
