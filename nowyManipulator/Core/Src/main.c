@@ -130,8 +130,8 @@ int main(void)
 	void motor0control();
 	void move();
 	void rotate();
-	void stopLmotorF();
-	void stopRmotorF();
+	void stopjazdaL();
+	void stopjazdaR();
 	void rightside();
 	void leftside();
 	void RmotorF();
@@ -192,8 +192,7 @@ int main(void)
   stopczlon2();
   stopczlon3();
   stopczlon4();
-  stopLmotorF();
-  stopRmotorF();
+
 
   /* USER CODE END 2 */
 
@@ -264,8 +263,8 @@ int main(void)
 		  stopczlon2();
 		  stopczlon3();
 		  stopczlon4();
-		  stopLmotorF();
-		  stopRmotorF();
+		  stopjazdaL();
+		  stopjazdaR();
 
 
 
@@ -283,8 +282,8 @@ int main(void)
 			  stopczlon2();
 			  stopczlon3();
 			  stopczlon4();
-			  stopLmotorF();
-			  stopRmotorF();
+			  stopjazdaR();
+			  stopjazdaL();
 
 		  }
 		  else if (autonomy)
@@ -299,8 +298,8 @@ int main(void)
 			  stopczlon2();
 			  stopczlon3();
 			  stopczlon4();
-			  stopLmotorF();
-			  stopRmotorF();
+			  stopjazdaL();
+			  stopjazdaR();
 		  }
 		  else
 		  {
@@ -533,12 +532,7 @@ void LmotorB()
 	HAL_GPIO_WritePin(L_D2_GPIO_Port, L_D2_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(L_D1_GPIO_Port, L_D1_Pin, GPIO_PIN_SET);
 }
-void stopLmotorF()
-{
-	HAL_GPIO_WritePin(L_D1_GPIO_Port, L_D1_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(L_D2_GPIO_Port,L_D2_Pin , GPIO_PIN_RESET);
-	PWMval(7,0);
-}
+
 void RmotorF()
 {
 	HAL_GPIO_WritePin(R_D1_GPIO_Port,R_D1_Pin , GPIO_PIN_RESET);
@@ -549,12 +543,7 @@ void RmotorB()
 	HAL_GPIO_WritePin(R_D2_GPIO_Port,R_D2_Pin , GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(R_D1_GPIO_Port,R_D1_Pin , GPIO_PIN_SET);
 }
-void stopRmotorF()
-{
-	HAL_GPIO_WritePin(R_D1_GPIO_Port,R_D1_Pin , GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(R_D2_GPIO_Port, R_D2_Pin, GPIO_PIN_RESET);
-	PWMval(6,0);
-}
+
 
 
 void stopjazdaR()
