@@ -1,54 +1,73 @@
-20:06:21 **** Incremental Build of configuration Debug for project odbiornikmani ****
+17:20:03 **** Incremental Build of configuration Debug for project odbiornikmani ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:111:25: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
-  111 |   nRF24_SetRXAddress(0, "Odb");
-      |                         ^~~~~
-      |                         |
-      |                         char *
-In file included from ../Core/Src/main.c:28:
-../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
-      |                                       ~~~~~~~~~^~~~~~~
-../Core/Src/main.c:112:22: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
-  112 |   nRF24_SetTXAddress("Nad");
-      |                      ^~~~~
-      |                      |
-      |                      char *
-In file included from ../Core/Src/main.c:28:
-../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-   37 | void nRF24_SetTXAddress(uint8_t* address);
-      |                         ~~~~~~~~~^~~~~~~
-../Core/Src/main.c:148:27: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
-  148 |     nRF24_SetRXAddress(0, "Odb");
-      |                           ^~~~~
-      |                           |
-      |                           char *
-In file included from ../Core/Src/main.c:28:
-../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
-      |                                       ~~~~~~~~~^~~~~~~
-../Core/Src/main.c:149:24: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
-  149 |     nRF24_SetTXAddress("Nad");
-      |                        ^~~~~
-      |                        |
-      |                        char *
-In file included from ../Core/Src/main.c:28:
-../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-   37 | void nRF24_SetTXAddress(uint8_t* address);
-      |                         ~~~~~~~~~^~~~~~~
-arm-none-eabi-gcc -o "odbiornikmani.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\odbiornikmani\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="odbiornikmani.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: odbiornikmani.elf
- 
-arm-none-eabi-size   odbiornikmani.elf 
-arm-none-eabi-objdump -h -S  odbiornikmani.elf  > "odbiornikmani.list"
-   text	   data	    bss	    dec	    hex	filename
-  13364	     20	   1756	  15140	   3b24	odbiornikmani.elf
-Finished building: default.size.stdout
- 
-Finished building: odbiornikmani.list
- 
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal.o"
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_cortex.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_cortex.o"
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_dma.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_dma.o"
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_exti.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_exti.o"
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash.o"
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash_ex.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash_ramfunc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_gpio.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_gpio.o"
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_pwr.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_pwr.o"
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c:36:10: fatal error: stm32l1xx_hal.h: No such file or directory
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_pwr_ex.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_pwr_ex.o"
+   36 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c:108:10: fatal error: stm32l1xx_hal.h: No such file or directory
+  108 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+arm-none-eabi-gcc "C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_rcc.d" -MT"Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_rcc.o"
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:66: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_cortex.o] Error 1
+make: *** Waiting for unfinished jobs....
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c:86:10: fatal error: stm32l1xx_hal.h: No such file or directory
+   86 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c:85:10: fatal error: stm32l1xx_hal.h: No such file or directory
+   85 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:64: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal.o] Error 1
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c:151:10: fatal error: stm32l1xx_hal.h: No such file or directory
+  151 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:70: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_exti.o] Error 1
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c:49:10: fatal error: stm32l1xx_hal.h: No such file or directory
+   49 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:68: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_dma.o] Error 1
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:72: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash.o] Error 1
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:74: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash_ex.o] Error 1
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c:118:10: fatal error: stm32l1xx_hal.h: No such file or directory
+  118 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c:43:10: fatal error: stm32l1xx_hal.h: No such file or directory
+   43 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:78: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_gpio.o] Error 1
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:76: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_flash_ramfunc.o] Error 1
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c:26:10: fatal error: stm32l1xx_hal.h: No such file or directory
+   26 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c:62:10: fatal error: stm32l1xx_hal.h: No such file or directory
+   62 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:80: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_pwr.o] Error 1
+C:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c:25:10: fatal error: stm32l1xx_hal.h: No such file or directory
+   25 | #include "stm32l1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:84: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_rcc.o] Error 1
+make: *** [Drivers/STM32L1xx_HAL_Driver/subdir.mk:82: Drivers/STM32L1xx_HAL_Driver/stm32l1xx_hal_pwr_ex.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-20:06:22 Build Finished. 0 errors, 4 warnings. (took 1s.209ms)
+17:20:03 Build Failed. 23 errors, 0 warnings. (took 682ms)
 

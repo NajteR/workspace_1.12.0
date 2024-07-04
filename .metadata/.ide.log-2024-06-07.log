@@ -1,0 +1,20 @@
+2024-06-07 12:35:57,234 [INFO] Activator:176 - 
+
+
+2024-06-07 12:35:57,249 [INFO] Activator:177 - !SESSION log4j initialized
+2024-06-07 12:36:03,872 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-06-07 12:36:35,421 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-06-07 12:36:35,421 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-06-07 12:36:35,421 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-06-07 13:03:28,680 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-06-07 13:03:28,680 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-06-07 13:03:29,682 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2024-06-07 13:03:29,682 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-06-07 16:27:28,748 [INFO] Activator:176 - 
+
+
+2024-06-07 16:27:28,748 [INFO] Activator:177 - !SESSION log4j initialized
+2024-06-07 16:27:34,964 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-06-07 16:28:05,893 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-06-07 16:28:05,909 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-06-07 16:28:05,925 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.

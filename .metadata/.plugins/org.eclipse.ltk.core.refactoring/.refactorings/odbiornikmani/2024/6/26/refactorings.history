@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;odbiornikmani/odbiornikManipulator.ioc&apos; to &apos;odbiornikmani.ioc&apos;" description="Rename resource &apos;odbiornikManipulator.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="odbiornikManipulator.ioc" name="odbiornikmani.ioc" stamp="1719501548853" updateReferences="true"/>
+</session>

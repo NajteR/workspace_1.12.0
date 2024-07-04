@@ -1,0 +1,52 @@
+2024-07-03 02:09:13,092 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 559013080 Bytes (927989760)
+2024-07-03 02:09:14,296 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 588915848 Bytes (927989760)
+2024-07-03 02:09:14,527 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 605693064 Bytes (927989760)
+2024-07-03 02:09:15,262 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-07-03 02:09:15,262 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-07-03 02:09:15,262 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-07-03 02:09:15,262 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8L1Cat345
+2024-07-03 02:09:15,262 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8L1Cat345
+2024-07-03 02:09:15,262 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8L1Cat345
+2024-07-03 02:09:15,262 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-07-03 02:09:15,262 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-07-03 02:09:15,262 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-07-03 02:09:15,262 [INFO] CodeGenerator:793 - code generatio: config db path: D:\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\
+2024-07-03 02:09:15,791 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\MXTmpFiles\license.tmp_save
+2024-07-03 02:09:16,381 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\MXTmpFiles\license.tmp
+2024-07-03 02:09:16,601 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\gpio.c_save
+2024-07-03 02:09:16,831 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\gpio.c
+2024-07-03 02:09:16,861 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\gpio.h_save
+2024-07-03 02:09:17,011 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\gpio.h
+2024-07-03 02:09:17,531 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\spi.c_save
+2024-07-03 02:09:17,731 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\spi.c
+2024-07-03 02:09:17,761 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\spi.h_save
+2024-07-03 02:09:17,921 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\spi.h
+2024-07-03 02:09:17,951 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\tim.c_save
+2024-07-03 02:09:18,171 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\tim.c
+2024-07-03 02:09:18,191 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\tim.h_save
+2024-07-03 02:09:18,299 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\tim.h
+2024-07-03 02:09:18,319 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\usart.c_save
+2024-07-03 02:09:18,449 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\usart.c
+2024-07-03 02:09:18,459 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\usart.h_save
+2024-07-03 02:09:18,559 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\usart.h
+2024-07-03 02:09:18,589 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\stm32l1xx_it.c_save
+2024-07-03 02:09:18,709 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\stm32l1xx_it.c
+2024-07-03 02:09:18,739 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\stm32l1xx_it.h_save
+2024-07-03 02:09:18,829 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\stm32l1xx_it.h
+2024-07-03 02:09:18,869 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\stm32l1xx_hal_msp.c_save
+2024-07-03 02:09:18,989 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\stm32l1xx_hal_msp.c
+2024-07-03 02:09:18,999 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\MXTmpFiles\system.tmp_save
+2024-07-03 02:09:19,079 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\MXTmpFiles\system.tmp
+2024-07-03 02:09:19,109 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\stm32l1xx_hal_conf.h_save
+2024-07-03 02:09:19,229 [INFO] CodeEngine:335 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\stm32l1xx_hal_conf.h
+2024-07-03 02:09:19,299 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\main.h_save
+2024-07-03 02:09:19,439 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Inc\main.h
+2024-07-03 02:09:19,469 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\main.c_save
+2024-07-03 02:09:19,699 [INFO] CodeEngine:279 - Generated code: C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\Core\Src\main.c
+2024-07-03 02:09:20,421 [INFO] ProjectBuilder:2996 - Time for Copy HAL[2] : 0mS.
+2024-07-03 02:09:20,451 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2024-07-03 02:09:20,891 [INFO] ConfigFileManager:1483 - The Die is : DIE437
+2024-07-03 02:09:20,914 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2024-07-03 02:09:20,924 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2024-07-03 02:09:20,954 [INFO] ApiDbMcu:507 - Load IP Config File for TOUCHSENSING
+2024-07-03 02:09:20,964 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE

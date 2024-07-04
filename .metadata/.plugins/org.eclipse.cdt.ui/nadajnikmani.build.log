@@ -1,4 +1,4 @@
-19:41:34 **** Build of configuration Debug for project nadajnikmani ****
+17:46:24 **** Build of configuration Debug for project nadajnikmani ****
 make -j12 all 
 arm-none-eabi-size   nadajnikmani.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   nadajnikmani.elf
 Finished building: default.size.stdout
  
 
-19:41:34 Build Finished. 0 errors, 0 warnings. (took 368ms)
+17:46:25 Build Finished. 0 errors, 0 warnings. (took 571ms)
 

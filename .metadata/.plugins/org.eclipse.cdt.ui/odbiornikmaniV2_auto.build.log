@@ -1,0 +1,141 @@
+21:30:46 **** Incremental Build of configuration Debug for project odbiornikmaniV2_auto ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:25: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  112 |   nRF24_SetRXAddress(0, "Odb");
+      |                         ^~~~~
+      |                         |
+      |                         char *
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:113:22: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  113 |   nRF24_SetTXAddress("Nad");
+      |                      ^~~~~
+      |                      |
+      |                      char *
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   37 | void nRF24_SetTXAddress(uint8_t* address);
+      |                         ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:138:29: error: 'LED1_GPIO_Port' undeclared (first use in this function); did you mean 'CE_GPIO_Port'?
+  138 |          HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+      |                             ^~~~~~~~~~~~~~
+      |                             CE_GPIO_Port
+../Core/Src/main.c:138:29: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:138:45: error: 'LED1_Pin' undeclared (first use in this function); did you mean 'CE_Pin'?
+  138 |          HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+      |                                             ^~~~~~~~
+      |                                             CE_Pin
+../Core/Src/main.c:149:27: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  149 |     nRF24_SetRXAddress(0, "Odb");
+      |                           ^~~~~
+      |                           |
+      |                           char *
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/nRF24.h:36:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   36 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:150:24: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  150 |     nRF24_SetTXAddress("Nad");
+      |                        ^~~~~
+      |                        |
+      |                        char *
+In file included from ../Core/Src/main.c:28:
+../Core/Inc/nRF24.h:37:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   37 | void nRF24_SetTXAddress(uint8_t* address);
+      |                         ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:152:23: error: 'DIR_ML1_GPIO_Port' undeclared (first use in this function)
+  152 |     HAL_GPIO_WritePin(DIR_ML1_GPIO_Port, DIR_ML1_Pin, GPIO_PIN_RESET);
+      |                       ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:152:42: error: 'DIR_ML1_Pin' undeclared (first use in this function)
+  152 |     HAL_GPIO_WritePin(DIR_ML1_GPIO_Port, DIR_ML1_Pin, GPIO_PIN_RESET);
+      |                                          ^~~~~~~~~~~
+../Core/Src/main.c:153:23: error: 'DIR_MR1_GPIO_Port' undeclared (first use in this function)
+  153 |     HAL_GPIO_WritePin(DIR_MR1_GPIO_Port, DIR_MR1_Pin, GPIO_PIN_RESET);
+      |                       ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:153:42: error: 'DIR_MR1_Pin' undeclared (first use in this function)
+  153 |     HAL_GPIO_WritePin(DIR_MR1_GPIO_Port, DIR_MR1_Pin, GPIO_PIN_RESET);
+      |                                          ^~~~~~~~~~~
+../Core/Src/main.c: In function 'triggercontrol':
+../Core/Src/main.c:236:20: error: 'DIR_ML2_GPIO_Port' undeclared (first use in this function)
+  236 |  HAL_GPIO_WritePin(DIR_ML2_GPIO_Port, DIR_ML2_Pin, GPIO_PIN_RESET);
+      |                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:236:39: error: 'DIR_ML2_Pin' undeclared (first use in this function)
+  236 |  HAL_GPIO_WritePin(DIR_ML2_GPIO_Port, DIR_ML2_Pin, GPIO_PIN_RESET);
+      |                                       ^~~~~~~~~~~
+../Core/Src/main.c:237:20: error: 'DIR_MR2_GPIO_Port' undeclared (first use in this function)
+  237 |  HAL_GPIO_WritePin(DIR_MR2_GPIO_Port, DIR_MR2_Pin, GPIO_PIN_RESET);
+      |                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:237:39: error: 'DIR_MR2_Pin' undeclared (first use in this function)
+  237 |  HAL_GPIO_WritePin(DIR_MR2_GPIO_Port, DIR_MR2_Pin, GPIO_PIN_RESET);
+      |                                       ^~~~~~~~~~~
+../Core/Src/main.c:238:20: error: 'DIR_ML1_GPIO_Port' undeclared (first use in this function)
+  238 |  HAL_GPIO_WritePin(DIR_ML1_GPIO_Port, DIR_ML1_Pin, GPIO_PIN_SET);
+      |                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:238:39: error: 'DIR_ML1_Pin' undeclared (first use in this function)
+  238 |  HAL_GPIO_WritePin(DIR_ML1_GPIO_Port, DIR_ML1_Pin, GPIO_PIN_SET);
+      |                                       ^~~~~~~~~~~
+../Core/Src/main.c:239:20: error: 'DIR_MR1_GPIO_Port' undeclared (first use in this function)
+  239 |  HAL_GPIO_WritePin(DIR_MR1_GPIO_Port, DIR_MR1_Pin, GPIO_PIN_SET);
+      |                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:239:39: error: 'DIR_MR1_Pin' undeclared (first use in this function)
+  239 |  HAL_GPIO_WritePin(DIR_MR1_GPIO_Port, DIR_MR1_Pin, GPIO_PIN_SET);
+      |                                       ^~~~~~~~~~~
+../Core/Src/main.c: In function 'joytrigcontrol':
+../Core/Src/main.c:250:20: error: 'DIR_ML2_GPIO_Port' undeclared (first use in this function)
+  250 |  HAL_GPIO_WritePin(DIR_ML2_GPIO_Port, DIR_ML2_Pin, GPIO_PIN_RESET);
+      |                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:250:39: error: 'DIR_ML2_Pin' undeclared (first use in this function)
+  250 |  HAL_GPIO_WritePin(DIR_ML2_GPIO_Port, DIR_ML2_Pin, GPIO_PIN_RESET);
+      |                                       ^~~~~~~~~~~
+../Core/Src/main.c:251:20: error: 'DIR_MR2_GPIO_Port' undeclared (first use in this function)
+  251 |  HAL_GPIO_WritePin(DIR_MR2_GPIO_Port, DIR_MR2_Pin, GPIO_PIN_RESET);
+      |                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:251:39: error: 'DIR_MR2_Pin' undeclared (first use in this function)
+  251 |  HAL_GPIO_WritePin(DIR_MR2_GPIO_Port, DIR_MR2_Pin, GPIO_PIN_RESET);
+      |                                       ^~~~~~~~~~~
+../Core/Src/main.c:252:20: error: 'DIR_ML1_GPIO_Port' undeclared (first use in this function)
+  252 |  HAL_GPIO_WritePin(DIR_ML1_GPIO_Port, DIR_ML1_Pin, GPIO_PIN_SET);
+      |                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:252:39: error: 'DIR_ML1_Pin' undeclared (first use in this function)
+  252 |  HAL_GPIO_WritePin(DIR_ML1_GPIO_Port, DIR_ML1_Pin, GPIO_PIN_SET);
+      |                                       ^~~~~~~~~~~
+../Core/Src/main.c:253:20: error: 'DIR_MR1_GPIO_Port' undeclared (first use in this function)
+  253 |  HAL_GPIO_WritePin(DIR_MR1_GPIO_Port, DIR_MR1_Pin, GPIO_PIN_SET);
+      |                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:253:39: error: 'DIR_MR1_Pin' undeclared (first use in this function)
+  253 |  HAL_GPIO_WritePin(DIR_MR1_GPIO_Port, DIR_MR1_Pin, GPIO_PIN_SET);
+      |                                       ^~~~~~~~~~~
+../Core/Src/main.c: In function 'joystickcontrol':
+../Core/Src/main.c:305:21: error: 'DIR_ML2_GPIO_Port' undeclared (first use in this function)
+  305 |   HAL_GPIO_WritePin(DIR_ML2_GPIO_Port, DIR_ML2_Pin, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:305:40: error: 'DIR_ML2_Pin' undeclared (first use in this function)
+  305 |   HAL_GPIO_WritePin(DIR_ML2_GPIO_Port, DIR_ML2_Pin, GPIO_PIN_RESET);
+      |                                        ^~~~~~~~~~~
+../Core/Src/main.c:306:21: error: 'DIR_MR2_GPIO_Port' undeclared (first use in this function)
+  306 |   HAL_GPIO_WritePin(DIR_MR2_GPIO_Port, DIR_MR2_Pin, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:306:40: error: 'DIR_MR2_Pin' undeclared (first use in this function)
+  306 |   HAL_GPIO_WritePin(DIR_MR2_GPIO_Port, DIR_MR2_Pin, GPIO_PIN_RESET);
+      |                                        ^~~~~~~~~~~
+../Core/Src/main.c:307:21: error: 'DIR_ML1_GPIO_Port' undeclared (first use in this function)
+  307 |   HAL_GPIO_WritePin(DIR_ML1_GPIO_Port, DIR_ML1_Pin, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:307:40: error: 'DIR_ML1_Pin' undeclared (first use in this function)
+  307 |   HAL_GPIO_WritePin(DIR_ML1_GPIO_Port, DIR_ML1_Pin, GPIO_PIN_RESET);
+      |                                        ^~~~~~~~~~~
+../Core/Src/main.c:308:21: error: 'DIR_MR1_GPIO_Port' undeclared (first use in this function)
+  308 |   HAL_GPIO_WritePin(DIR_MR1_GPIO_Port, DIR_MR1_Pin, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:308:40: error: 'DIR_MR1_Pin' undeclared (first use in this function)
+  308 |   HAL_GPIO_WritePin(DIR_MR1_GPIO_Port, DIR_MR1_Pin, GPIO_PIN_RESET);
+      |                                        ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+21:30:46 Build Failed. 31 errors, 4 warnings. (took 721ms)
+
