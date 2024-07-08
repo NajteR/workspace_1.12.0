@@ -67,6 +67,9 @@ uint8_t moveA;
 uint8_t moveB;
 uint8_t rotateA;
 uint8_t rotateB;
+uint8_t offcon;
+uint8_t autonomy;
+uint8_t sum;
 
 uint8_t	byte1;
 uint8_t	byte2;
@@ -84,7 +87,7 @@ uint8_t chsm;
 
 float pwm1 = 0;
 float pwm2 = 0;
-float step = 1;
+float step = 0.25;
 
 float pwmRight = 0;
 float pwmLeft = 0;
@@ -127,8 +130,8 @@ int main(void)
 	void motor0control();
 	void move();
 	void rotate();
-	void stopLmotorF();
-	void stopRmotorF();
+	void stopjazdaL();
+	void stopjazdaR();
 	void rightside();
 	void leftside();
 	void RmotorF();
@@ -189,8 +192,7 @@ int main(void)
   stopczlon2();
   stopczlon3();
   stopczlon4();
-  stopLmotorF();
-  stopRmotorF();
+
 
   /* USER CODE END 2 */
 
@@ -232,8 +234,8 @@ int main(void)
 				 moveB    = (nrfdata[1] & 0b00001000) >> 3; // ascii < dec 60
 				 rotateA  = (nrfdata[1] & 0b00010000) >> 4; // ascii > dec 62
 				 rotateB  = (nrfdata[1] & 0b00100000) >> 5; // ascii ? dec 63
-				 //button3A = (nrfdata[1] & 0b01000000) >> 6; // ascii 7
-				 //button3B = (nrfdata[1] & 0b10000000) >> 7; // ascii 8
+				 offcon	  = (nrfdata[1] & 0b01000000) >> 6; // ascii 7
+				 autonomy = (nrfdata[1] & 0b10000000) >> 7; // ascii 8
 
 				 byte1 = nrfdata[0];
 				 byte2 = nrfdata[1];
@@ -245,25 +247,11 @@ int main(void)
 				 byte8 = nrfdata[7]; // nrfdata7
 
 				 chsm = nrfdata[8];
-				  if (chsm == ((byte1 + byte2 + byte3 + byte4 + byte5 + byte6 + byte7 + byte8) & 0xFF))
-				  {
-					  	// triggergripper();
-					  	 rightside();
-					  	 leftside();
-					  	 motor5control();
-				 		 motor4control();
-				 		 motor3control();
-				 		 motor2control();
-				 		 motor1control();
-				 		 motor0control();
-
-				 		// move();
-				 		// rotate();
-				  }
+				 sum = ((byte1 + byte2 + byte3 + byte4 + byte5 + byte6 + byte7 + byte8) & 0xFF);
 
 	  	  	  }
 	  //if there is no signal restart nRF24 and stop motor
-	  else if(HAL_GetTick()-timereset > 500)
+	  if(HAL_GetTick()-timereset > 500)
 	  {
 		  nRF24_Init(&hspi2);
 		  nRF24_SetRXAddress(0, "Odb");
@@ -275,11 +263,63 @@ int main(void)
 		  stopczlon2();
 		  stopczlon3();
 		  stopczlon4();
-		  stopLmotorF();
-		  stopRmotorF();
+		  stopjazdaL();
+		  stopjazdaR();
 
 
 
+	  }
+	  if(sum == chsm)
+	  {
+		  if (offcon)
+		  {
+			  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
+			  stoppodst();
+			  stopczlon5();
+			  stopczlon1();
+			  stopczlon2();
+			  stopczlon3();
+			  stopczlon4();
+			  stopjazdaR();
+			  stopjazdaL();
+
+		  }
+		  else if (autonomy)
+		  {
+			  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
+
+			  stoppodst();
+			  stopczlon5();
+			  stopczlon1();
+			  stopczlon2();
+			  stopczlon3();
+			  stopczlon4();
+			  stopjazdaL();
+			  stopjazdaR();
+		  }
+		  else
+		  {
+				// triggergripper();
+			  	 HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
+			  	 HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
+			  	 HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
+
+				 rightside();
+				 leftside();
+				 motor5control();
+				 motor4control();
+				 motor3control();
+				 motor2control();
+				 motor1control();
+				 motor0control();
+
+				// move();
+				// rotate();
+		  }
 	  }
 
 
@@ -492,12 +532,7 @@ void LmotorB()
 	HAL_GPIO_WritePin(L_D2_GPIO_Port, L_D2_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(L_D1_GPIO_Port, L_D1_Pin, GPIO_PIN_SET);
 }
-void stopLmotorF()
-{
-	HAL_GPIO_WritePin(L_D1_GPIO_Port, L_D1_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(L_D2_GPIO_Port,L_D2_Pin , GPIO_PIN_RESET);
-	PWMval(7,0);
-}
+
 void RmotorF()
 {
 	HAL_GPIO_WritePin(R_D1_GPIO_Port,R_D1_Pin , GPIO_PIN_RESET);
@@ -508,14 +543,53 @@ void RmotorB()
 	HAL_GPIO_WritePin(R_D2_GPIO_Port,R_D2_Pin , GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(R_D1_GPIO_Port,R_D1_Pin , GPIO_PIN_SET);
 }
-void stopRmotorF()
+
+
+
+void stopjazdaR()
 {
-	HAL_GPIO_WritePin(R_D1_GPIO_Port,R_D1_Pin , GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(R_D2_GPIO_Port, R_D2_Pin, GPIO_PIN_RESET);
-	PWMval(6,0);
+	if (0 > pwmRight)
+			{
+				pwmRight = pwmRight + step;
+			}
+		else if (0 < pwmRight)
+			{
+				pwmRight = pwmRight - step;
+			}
+		if (pwmRight > 0)
+				{
+					RmotorF();
+					PWMval(6, (int)pwmRight);
+				}
+		else if (pwmRight < 0)
+			{
+				RmotorB();
+				PWMval(6, ((int)pwmRight)*-1);
+			}
+
 }
+void stopjazdaL()
+{
+	if (0 > pwmLeft)
+			{
+				pwmLeft = pwmLeft + step;
+			}
+		else if (0 < pwmLeft)
+			{
+				pwmLeft = pwmLeft - step;
+			}
+		if (pwmLeft > 0)
+				{
+					LmotorF();
+					PWMval(7, (int)pwmLeft);
+				}
+		else if (pwmLeft < 0)
+			{
+				LmotorB();
+				PWMval(7, ((int)pwmLeft)*-1);
+			}
 
-
+}
 void rightside()
 {
 	pwm1 = map(byte7,32,127,0,1000);

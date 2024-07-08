@@ -50,6 +50,9 @@
 
 /* USER CODE BEGIN PV */
 uint8_t nrfdata[9];
+uint8_t jetsondata[4];
+uint8_t autoY[3] = ":Y0";
+uint8_t autoN[3] = ":N0";
 
 
 
@@ -91,6 +94,10 @@ float step = 0.25;
 
 float pwmRight = 0;
 float pwmLeft = 0;
+
+float sx = 0;
+float sy = 0;
+
 
 uint32_t time;
 uint32_t timereset;
@@ -138,7 +145,12 @@ int main(void)
 	void RmotorB();
 	void LmotorF();
 	void LmotorB();
+	void servox();
+	void servoy();
 	void PWMval(uint8_t ch, uint16_t val);
+	uint16_t map(uint16_t input_value, uint16_t minRange, uint16_t maxRange, uint16_t New_minRange, uint16_t New_maxRange);
+
+
 
   /* USER CODE END 1 */
 
@@ -183,6 +195,8 @@ int main(void)
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+  HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_2);
   time = HAL_GetTick();
   timereset = HAL_GetTick();
@@ -192,6 +206,10 @@ int main(void)
   stopczlon2();
   stopczlon3();
   stopczlon4();
+
+  autoY[2] = ((autoY[0] + autoY[1]) & 0xFF);
+  autoN[2] = ((autoN[0] + autoN[1]) & 0xFF);
+
 
 
   /* USER CODE END 2 */
@@ -292,14 +310,61 @@ int main(void)
 			  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
 			  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
 
-			  stoppodst();
-			  stopczlon5();
-			  stopczlon1();
-			  stopczlon2();
-			  stopczlon3();
-			  stopczlon4();
-			  stopjazdaL();
-			  stopjazdaR();
+			  HAL_UART_Transmit(&huart2, autoY, 3, 1000);
+			  HAL_UART_Receive(&huart2, jetsondata, 4, 1000);
+			  if (jetsondata[3] == ((jetsondata[0] + jetsondata[1] + jetsondata[2]) & 0xFF))
+			  {
+					pwm1 = map(jetsondata[1],32,127,0,1000);
+					pwm1 = (pwm1 - 500)*2;
+
+
+						if (pwm1 > pwmRight)
+						{
+							pwmRight = pwmRight + step;
+						}
+						else if (pwm1 < pwmRight)
+						{
+							pwmRight = pwmRight - step;
+						}
+						if (pwmRight > 0)
+							{
+								RmotorF();
+								PWMval(6, (int)pwmRight);
+							}
+						else if (pwmRight < 0)
+						{
+							RmotorB();
+							PWMval(6, ((int)pwmRight)*-1);
+						}
+
+
+
+						pwm2 = map(jetsondata[2],32,127,0,1000);
+						pwm2 = (pwm2 - 500)*2;
+
+								if (pwm2 > pwmLeft)
+									{
+										pwmLeft = pwmLeft+step;
+									}
+									else if (pwm2 < pwmLeft)
+									{
+										pwmLeft = pwmLeft-step;
+									}
+									if (pwmLeft > 0)
+									{
+										LmotorF();
+										PWMval(7, (int)pwmLeft);
+									}
+									else if (pwmLeft < 0)
+									{
+										LmotorB();
+										PWMval(7, ((int)pwmLeft)*-1);
+									}
+
+
+
+			  }
+
 		  }
 		  else
 		  {
@@ -316,6 +381,8 @@ int main(void)
 				 motor2control();
 				 motor1control();
 				 motor0control();
+				 servox();
+				 servoy();
 
 				// move();
 				// rotate();
@@ -656,7 +723,31 @@ void leftside()
 
 
 }
+void servox()
+{
 
+	sx = map(byte5,32,127,0,1000);
+	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, sx);
+
+
+
+
+
+
+}
+void servoy()
+{
+
+	sy = map(byte6,32,127,0,1000);
+	__HAL_TIM_SET_COMPARE(&htim5, TIM_CHANNEL_1, sx);
+
+
+
+
+
+
+
+}
 
 void motor0control()
 {
