@@ -730,7 +730,7 @@ void leftside()
 void servox()
 {
 
-	sx = map(byte5,32,127,1000,2000);
+	sx = map(byte5,32,127,0,1000);
 	__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, sx);
 
 
@@ -742,7 +742,7 @@ void servox()
 void servoy()
 {
 
-	sy = map(byte6,32,127,1000,2000);
+	sy = map(byte6,32,127,0,1000);
 	__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, sx);
 
 

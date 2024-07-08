@@ -67,8 +67,6 @@ void Error_Handler(void);
 #define L_D1_GPIO_Port GPIOC
 #define LED_YELLOW_Pin GPIO_PIN_3
 #define LED_YELLOW_GPIO_Port GPIOC
-#define SERVO_2_Pin GPIO_PIN_0
-#define SERVO_2_GPIO_Port GPIOA
 #define L_PWM_Pin GPIO_PIN_1
 #define L_PWM_GPIO_Port GPIOA
 #define USART_TX_Pin GPIO_PIN_2
@@ -91,6 +89,8 @@ void Error_Handler(void);
 #define CSN_GPIO_Port GPIOB
 #define Czlon1_D1_Pin GPIO_PIN_10
 #define Czlon1_D1_GPIO_Port GPIOB
+#define SERVO_2_Pin GPIO_PIN_11
+#define SERVO_2_GPIO_Port GPIOB
 #define Czlon5_D2_Pin GPIO_PIN_12
 #define Czlon5_D2_GPIO_Port GPIOB
 #define Czlon3_D2_Pin GPIO_PIN_6
@@ -99,8 +99,6 @@ void Error_Handler(void);
 #define Czlon2_D2_GPIO_Port GPIOC
 #define Czlon3_D1_Pin GPIO_PIN_8
 #define Czlon3_D1_GPIO_Port GPIOC
-#define SERVO_1_Pin GPIO_PIN_9
-#define SERVO_1_GPIO_Port GPIOC
 #define Czlon1_D2_Pin GPIO_PIN_8
 #define Czlon1_D2_GPIO_Port GPIOA
 #define Czlon2_D1_Pin GPIO_PIN_9
@@ -113,6 +111,8 @@ void Error_Handler(void);
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
+#define SERVO_1_Pin GPIO_PIN_15
+#define SERVO_1_GPIO_Port GPIOA
 #define L_D2_Pin GPIO_PIN_10
 #define L_D2_GPIO_Port GPIOC
 #define R_D2_Pin GPIO_PIN_12
