@@ -50,10 +50,9 @@
 
 /* USER CODE BEGIN PV */
 uint8_t nrfdata[9];
-uint8_t jetsondata[3];
+uint8_t jetsondata[4];
 uint8_t autoY[3] = ":Y0";
 uint8_t autoN[3] = ":N0";
-uint8_t start[1];
 
 
 
@@ -316,25 +315,25 @@ int main(void)
 			  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
 			  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
 
-			  HAL_UART_Transmit(&huart2, autoY, 3, 100);
-
-			  if(HAL_UART_Receive(&huart2, start, 1, 100) != 3 && start[0] == 58)
+			  HAL_UART_Transmit(&huart2, autoY, 3, 500);
+			  if((HAL_UART_Receive(&huart2, jetsondata, 4, 500) == 1))
+					  {
+				  stoppodst();
+				  stopczlon5();
+				  stopczlon1();
+				  stopczlon2();
+				  stopczlon3();
+				  stopczlon4();
+				  stopjazdaR();
+				  stopjazdaL();
+					  }
+			  if (jetsondata[3] == ((jetsondata[0] + jetsondata[1] + jetsondata[2]) & 0xFF) && jetsondata[0] == 58)
 			  {
-
-
-			  HAL_UART_Receive(&huart2, jetsondata, 3, 100);
-
-			  if (jetsondata[2] == ((jetsondata[1] + jetsondata[0] + start[0]) & 0xFF))
-			  {
-					pwm1 = map(jetsondata[0],32,127,0,1000);
+					pwm1 = map(jetsondata[1],32,127,0,1000);
 					pwm1 = (pwm1 - 500)*2;
 
-						if(pwm1 > -200 && pwm1 < 200)
-						{
-							PWMval(6, 0);
-						}
 
-						else if (pwm1 > pwmRight)
+						if (pwm1 > pwmRight)
 						{
 							pwmRight = pwmRight + step;
 						}
@@ -355,13 +354,10 @@ int main(void)
 
 
 
-						pwm2 = map(jetsondata[1],32,127,0,1000);
+						pwm2 = map(jetsondata[2],32,127,0,1000);
 						pwm2 = (pwm2 - 500)*2;
-						if(pwm1 > -200 && pwm1 < 200)
-						{
-							PWMval(6, 0);
-						}
-						else if (pwm2 > pwmLeft)
+
+								if (pwm2 > pwmLeft)
 									{
 										pwmLeft = pwmLeft+step;
 									}
@@ -380,27 +376,14 @@ int main(void)
 										PWMval(7, ((int)pwmLeft)*-1);
 									}
 
-							  	  	 if (HAL_GetTick()-timeauto > 1000)
-							  	  	 {
-							  	  		HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
-							  	  		timeauto = HAL_GetTick();
-							  	  	 }
 
-
+									time = HAL_GetTick();
 			  }
-			  else
-			  {
-		  stoppodst();
-		  stopczlon5();
-		  stopczlon1();
-		  stopczlon2();
-		  stopczlon3();
-		  stopczlon4();
-		  stopjazdaR();
-		  stopjazdaL();
-			  }
-			  }
-
+		  	  	 if (HAL_GetTick()-timeauto > 1000)
+		  	  	 {
+		  	  		HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
+		  	  		timeauto = HAL_GetTick();
+		  	  	 }
 
 		  }
 		  else
