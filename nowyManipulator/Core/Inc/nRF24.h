@@ -1,5 +1,3 @@
-
-
 #ifndef INC_NRF24_NRF24_H_
 #define INC_NRF24_NRF24_H_
 
@@ -33,31 +31,28 @@ void nRF24_SetRFChannel(uint8_t channel);
 void nRF24_SetPayloadSize(uint8_t pipe, uint8_t size);
 void nRF24_EnablePipe(uint8_t pipe, uint8_t onoff);
 void nRF24_AutoACK(uint8_t pipe, uint8_t onoff);
-void nRF24_SetRXAddress(uint8_t pipe, uint8_t* address); // Remember to define RX address before TX
-void nRF24_SetTXAddress(uint8_t* address);
+void nRF24_SetRXAddress(uint8_t pipe, uint8_t *address); // Remember to define RX address before TX
+void nRF24_SetTXAddress(uint8_t *address);
 void nRF24_SetAddressWidth(uint8_t size);
-
-
 
 //
 // PUSH/PULL DATA TO PAYLOAD
 //
-void nRF24_WriteTXPayload(uint8_t* data);
+void nRF24_WriteTXPayload(uint8_t *data);
 void nRF24_WaitTX();
-void nRF24_ReadRXPaylaod(uint8_t* data);
+void nRF24_ReadRXPaylaod(uint8_t *data);
 
 //
 // TRANSMITTING DATA
 //
-void nRF24_SendPacket(uint8_t* data);
-void nRF24_ReceivePacket(uint8_t* data);
+void nRF24_SendPacket(uint8_t *data);
+void nRF24_ReceivePacket(uint8_t *data);
 
 //
 // FLUSHING FIFOs
 //
 void nRF24_FlushRX(void);
 void nRF24_FlushTX(void);
-
 
 //
 // POLLING METHOD
