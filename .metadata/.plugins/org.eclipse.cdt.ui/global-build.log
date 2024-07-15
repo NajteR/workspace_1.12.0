@@ -1,9 +1,9 @@
-12:33:40 **** Build of configuration Debug for project nowyManipulator ****
+23:44:00 **** Incremental Build of configuration Debug for project nowyManipulator ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Device/ST/STM32L1xx/Include -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:183:24: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
-  183 |  nRF24_SetRXAddress(0, "Odb");
+../Core/Src/main.c:185:24: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  185 |  nRF24_SetRXAddress(0, "Odb");
       |                        ^~~~~
       |                        |
       |                        char *
@@ -11,8 +11,8 @@ In file included from ../Core/Src/main.c:29:
 ../Core/Inc/nRF24.h:34:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
    34 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t *address); // Remember to define RX address before TX
       |                                       ~~~~~~~~~^~~~~~~
-../Core/Src/main.c:184:21: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
-  184 |  nRF24_SetTXAddress("Nad");
+../Core/Src/main.c:186:21: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  186 |  nRF24_SetTXAddress("Nad");
       |                     ^~~~~
       |                     |
       |                     char *
@@ -20,8 +20,8 @@ In file included from ../Core/Src/main.c:29:
 ../Core/Inc/nRF24.h:35:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
    35 | void nRF24_SetTXAddress(uint8_t *address);
       |                         ~~~~~~~~~^~~~~~~
-../Core/Src/main.c:270:26: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
-  270 |    nRF24_SetRXAddress(0, "Odb");
+../Core/Src/main.c:326:26: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  326 |    nRF24_SetRXAddress(0, "Odb");
       |                          ^~~~~
       |                          |
       |                          char *
@@ -29,8 +29,8 @@ In file included from ../Core/Src/main.c:29:
 ../Core/Inc/nRF24.h:34:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
    34 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t *address); // Remember to define RX address before TX
       |                                       ~~~~~~~~~^~~~~~~
-../Core/Src/main.c:271:23: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
-  271 |    nRF24_SetTXAddress("Nad");
+../Core/Src/main.c:327:23: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  327 |    nRF24_SetTXAddress("Nad");
       |                       ^~~~~
       |                       |
       |                       char *
@@ -44,15 +44,15 @@ Finished building target: nowyManipulator.elf
 arm-none-eabi-size   nowyManipulator.elf 
 arm-none-eabi-objdump -h -S  nowyManipulator.elf  > "nowyManipulator.list"
    text	   data	    bss	    dec	    hex	filename
-  23920	     32	   2072	  26024	   65a8	nowyManipulator.elf
+  24668	     32	   2080	  26780	   689c	nowyManipulator.elf
 Finished building: default.size.stdout
  
 Finished building: nowyManipulator.list
  
-20:56:07 **** Incremental Build of configuration Debug for project nowyManipulator ****
+23:46:12 **** Incremental Build of configuration Debug for project nowyManipulator ****
 make -j12 all 
 arm-none-eabi-size   nowyManipulator.elf 
    text	   data	    bss	    dec	    hex	filename
-  23920	     32	   2072	  26024	   65a8	nowyManipulator.elf
+  24668	     32	   2080	  26780	   689c	nowyManipulator.elf
 Finished building: default.size.stdout
  

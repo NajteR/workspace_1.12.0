@@ -321,7 +321,6 @@ int main(void)
 
 
 					}
-			else {
 			nRF24_Init(&hspi2);
 			nRF24_SetRXAddress(0, "Odb");
 			nRF24_SetTXAddress("Nad");
@@ -359,7 +358,6 @@ int main(void)
 				PWMval(6, ((int) pwmRight) * -1);
 			}
 
-		}
 		}
 
 		else if (sum == chsm) {
