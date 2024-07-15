@@ -545,3 +545,11 @@
 2024-07-15 23:42:05,284 [INFO] CADModel:165 - CPN selected for project levelSTM32L152RET6
 2024-07-15 23:42:05,284 [INFO] CADModel:114 - Register for checkConnection events
 2024-07-15 23:42:05,347 [INFO] OpenFileManager:328 - Restore cursor
+2024-07-15 23:56:02,060 [INFO] Activator:176 - 
+
+
+2024-07-15 23:56:02,063 [INFO] Activator:177 - !SESSION log4j initialized
+2024-07-15 23:56:08,107 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-07-15 23:56:38,650 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-07-15 23:56:38,650 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-07-15 23:56:38,652 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
