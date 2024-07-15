@@ -51,7 +51,6 @@
 /* USER CODE BEGIN PV */
 uint8_t nrfdata[9];
 uint8_t jetsondata[3];
-uint8_t jetsondata4[4];
 uint8_t autoY[3] = ":Y0";
 uint8_t autoN[3] = ":N0";
 uint8_t start[1];
@@ -304,55 +303,6 @@ int main(void)
 				RmotorB();
 				PWMval(6, ((int) pwmRight) * -1);
 			}
-
-		}
-		else if (HAL_UART_Receive(&huart2, start, 1, 100) != 3 && start[0] == 38)
-		{
-			//autonomia po braku anteny
-			timereset = HAL_GetTick();
-			HAL_UART_Receive(&huart2, jetsondata4, 4, 100);
-			pwm1 = map(jetsondata4[0], 32, 127, 0, 1000);
-									pwm1 = (pwm1 - 500) * 2;
-
-									if (pwm1 > -200 && pwm1 < 200) {
-										PWMval(6, 0);
-									}
-
-									else if (pwm1 > pwmRight) {
-										pwmRight = pwmRight + step;
-									}
-									else if (pwm1 < pwmRight) {
-										pwmRight = pwmRight - step;
-									}
-									if (pwmRight > 0) {
-										RmotorF();
-										PWMval(6, (int) pwmRight);
-									}
-									else if (pwmRight < 0) {
-										RmotorB();
-										PWMval(6, ((int) pwmRight) * -1);
-									}
-
-									pwm2 = map(jetsondata4[1], 32, 127, 0, 1000);
-									pwm2 = (pwm2 - 500) * 2;
-									if (pwm1 > -200 && pwm1 < 200) {
-										PWMval(7, 0);
-									}
-									else if (pwm2 > pwmLeft) {
-										pwmLeft = pwmLeft + step;
-									}
-									else if (pwm2 < pwmLeft) {
-										pwmLeft = pwmLeft - step;
-									}
-									if (pwmLeft > 0) {
-										LmotorF();
-										PWMval(7, (int) pwmLeft);
-									}
-									else if (pwmLeft < 0) {
-										LmotorB();
-										PWMval(7, ((int) pwmLeft) * -1);
-									}
-
 
 		}
 		else if (sum == chsm) {
