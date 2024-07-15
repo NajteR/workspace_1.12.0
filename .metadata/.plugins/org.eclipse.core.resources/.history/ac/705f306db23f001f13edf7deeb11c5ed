@@ -145,7 +145,6 @@ int main(void)
 	void servoy();
 	void servox0();
 	void servoy0();
-	void czlon2L();
 	void PWMval(uint8_t ch, uint16_t val);
 	uint16_t map(uint16_t input_value, uint16_t minRange, uint16_t maxRange,
 			uint16_t New_minRange, uint16_t New_maxRange);
@@ -237,8 +236,8 @@ int main(void)
 			button1B = (nrfdata[0] & 0b00001000) >> 3; // ascii 4 dec 52
 			button2A = (nrfdata[0] & 0b00010000) >> 4; // ascii 5 dec 53
 			button2B = (nrfdata[0] & 0b00100000) >> 5; // ascii 6 dec 54
-			button3A = (nrfdata[0] & 0b01000000) >> 6; // ascii 7 dec 55 otw
-			button3B = (nrfdata[0] & 0b10000000) >> 7; // ascii 8 dec 56 zamk
+			button3A = (nrfdata[0] & 0b01000000) >> 6; // ascii 7 dec 55
+			button3B = (nrfdata[0] & 0b10000000) >> 7; // ascii 8 dec 56
 
 			//byte 2
 			button4A = (nrfdata[1] & 0b00000001); // acsii 9 dec 57
@@ -276,35 +275,13 @@ int main(void)
 			stopczlon2();
 			stopczlon3();
 			stopczlon4();
+			stopjazdaL();
+			stopjazdaR();
 			servox0();
 			servoy0();
-			if (0 > pwmLeft) {
-				pwmLeft = pwmLeft + 2;
-			} else if (0 < pwmLeft) {
-				pwmLeft = pwmLeft - 2;
-			}
-			if (pwmLeft >= 0) {
-				LmotorF();
-				PWMval(7, (int) pwmLeft);
-			} else if (pwmLeft < 0) {
-				LmotorB();
-				PWMval(7, ((int) pwmLeft) * -1);
-			}
-			if (0 > pwmRight) {
-				pwmRight = pwmRight + 2;
-			} else if (0 < pwmRight) {
-				pwmRight = pwmRight - 2;
-			}
-			if (pwmRight >= 0) {
-				RmotorF();
-				PWMval(6, (int) pwmRight);
-			} else if (pwmRight < 0) {
-				RmotorB();
-				PWMval(6, ((int) pwmRight) * -1);
-			}
 
 		}
-		else if (sum == chsm) {
+		if (sum == chsm) {
 			if (offcon) {
 				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin,
 						GPIO_PIN_RESET);
@@ -323,8 +300,7 @@ int main(void)
 				servoy0();
 
 			}
-			else if (autonomy)
-			{
+			else if (autonomy) {
 				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin,
 						GPIO_PIN_RESET);
 				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin,
@@ -333,19 +309,16 @@ int main(void)
 
 				HAL_UART_Transmit(&huart2, autoY, 3, 100);
 
-				if (HAL_UART_Receive(&huart2, start, 1, 100) != 3 && start[0] == 58)
-				{
+				if (HAL_UART_Receive(&huart2, start, 1, 100) != 3
+						&& start[0] == 58) {
 
 					HAL_UART_Receive(&huart2, jetsondata, 3, 100);
 
-					if (jetsondata[2] == ((jetsondata[1] + jetsondata[0] + start[0]) & 0xFF))
-					{
+					if (jetsondata[2] == ((jetsondata[1] + jetsondata[0] + start[0]) & 0xFF)) {
 
 						if (jetsondata[1] == 200 && jetsondata[2] == 200)
 						{
 							//otw chwytaka
-							czlon2L();
-							PWMval(2, 1000);
 						}
 						else
 						{
