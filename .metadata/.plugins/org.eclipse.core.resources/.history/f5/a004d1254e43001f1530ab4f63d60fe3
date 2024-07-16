@@ -76,11 +76,6 @@ uint8_t offcon;
 uint8_t autonomy;
 uint8_t sum;
 
-uint8_t LEDR;
-uint8_t LEDG;
-uint8_t LEDY;
-uint8_t otw;
-
 uint8_t byte1;
 uint8_t byte2;
 uint8_t byte3;
@@ -323,35 +318,6 @@ int main(void)
 													LmotorB();
 													PWMval(7, ((int) pwmLeft) * -1);
 												}
-												LEDR = (nrfdata[1] & 0b00000001);
-												LEDG = (nrfdata[1] & 0b00000010) >> 1;
-												LEDY = (nrfdata[1] & 0b00000100) >> 2;
-												otw = (nrfdata[1] & 0b00001000) >> 3;
-
-												if (otw){
-													//otw chwytaka
-													czlon2L();
-													PWMval(2, 1000);
-												}
-												if (LEDR){
-													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDR){
-													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
-												}
-												if (LEDG){
-													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDG){
-													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
-												}
-												if (LEDY){
-													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDY){
-													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
-												}
-
 						}
 
 
@@ -489,7 +455,6 @@ int main(void)
 									LED_YELLOW_Pin);
 							timeauto = HAL_GetTick();
 						}
-
 						}
 
 					}

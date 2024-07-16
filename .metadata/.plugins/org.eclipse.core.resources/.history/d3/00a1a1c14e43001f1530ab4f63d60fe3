@@ -327,31 +327,6 @@ int main(void)
 												LEDG = (nrfdata[1] & 0b00000010) >> 1;
 												LEDY = (nrfdata[1] & 0b00000100) >> 2;
 												otw = (nrfdata[1] & 0b00001000) >> 3;
-
-												if (otw){
-													//otw chwytaka
-													czlon2L();
-													PWMval(2, 1000);
-												}
-												if (LEDR){
-													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDR){
-													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
-												}
-												if (LEDG){
-													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDG){
-													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
-												}
-												if (LEDY){
-													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDY){
-													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
-												}
-
 						}
 
 
