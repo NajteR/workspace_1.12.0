@@ -1388,8 +1388,8 @@ int main(void)
  8000cf6:	1ad3      	subs	r3, r2, r3
  8000cf8:	f5b3 7fc8 	cmp.w	r3, #400	; 0x190
  8000cfc:	f240 82e0 	bls.w	80012c0 <main+0x93c>
-			if (HAL_UART_Receive(&huart2, start2, 1, 100) != 3 && start2[0] == 38)
- 8000d00:	2364      	movs	r3, #100	; 0x64
+			if (HAL_UART_Receive(&huart2, start2, 1, 20) != 3 && start2[0] == 38)
+ 8000d00:	2314      	movs	r3, #20
  8000d02:	2201      	movs	r2, #1
  8000d04:	4987      	ldr	r1, [pc, #540]	; (8000f24 <main+0x5a0>)
  8000d06:	4888      	ldr	r0, [pc, #544]	; (8000f28 <main+0x5a4>)

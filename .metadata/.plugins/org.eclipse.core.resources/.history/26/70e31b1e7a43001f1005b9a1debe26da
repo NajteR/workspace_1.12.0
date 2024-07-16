@@ -275,7 +275,7 @@ int main(void)
 
 		//if there is no signal restart nRF24 and stop motor
 		if (HAL_GetTick() - timereset > 400) {
-			if (HAL_UART_Receive(&huart2, start2, 1, 20) != 3 && start2[0] == 38)
+			if (HAL_UART_Receive(&huart2, start2, 1, 100) != 3 && start2[0] == 38)
 					{
 						//autonomia po braku anteny
 
