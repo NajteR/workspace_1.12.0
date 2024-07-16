@@ -357,11 +357,10 @@ int main(void)
 
 					}
 			else {
-				// pewnie przez to dziala wolno
-			//nRF24_Init(&hspi2);
-			//nRF24_SetRXAddress(0, "Odb");
-			//nRF24_SetTXAddress("Nad");
-			//nRF24_RX_Mode();
+			nRF24_Init(&hspi2);
+			nRF24_SetRXAddress(0, "Odb");
+			nRF24_SetTXAddress("Nad");
+			nRF24_RX_Mode();
 			stoppodst();
 			stopczlon5();
 			stopczlon1();
@@ -375,39 +374,24 @@ int main(void)
 			} else if (0 < pwmLeft) {
 				pwmLeft = pwmLeft - 2;
 			}
-			if (pwmLeft > 2) {
+			if (pwmLeft >= 0) {
 				LmotorF();
 				PWMval(7, (int) pwmLeft);
-			} else if (pwmLeft < -2) {
+			} else if (pwmLeft < 0) {
 				LmotorB();
 				PWMval(7, ((int) pwmLeft) * -1);
-			}
-			else {
-				PWMval(7, 0);
-				nRF24_Init(&hspi2);
-				nRF24_SetRXAddress(0, "Odb");
-				nRF24_SetTXAddress("Nad");
-				nRF24_RX_Mode();
-
 			}
 			if (0 > pwmRight) {
 				pwmRight = pwmRight + 2;
 			} else if (0 < pwmRight) {
 				pwmRight = pwmRight - 2;
 			}
-			if (pwmRight >= 2) {
+			if (pwmRight >= 0) {
 				RmotorF();
 				PWMval(6, (int) pwmRight);
-			} else if (pwmRight < -2) {
+			} else if (pwmRight < 0) {
 				RmotorB();
 				PWMval(6, ((int) pwmRight) * -1);
-			}
-			else {
-				PWMval(6, 0);
-				nRF24_Init(&hspi2);
-				nRF24_SetRXAddress(0, "Odb");
-				nRF24_SetTXAddress("Nad");
-				nRF24_RX_Mode();
 			}
 
 		}
