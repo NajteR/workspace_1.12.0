@@ -52,8 +52,8 @@
 /* USER CODE BEGIN PV */
 uint8_t nrfdata[9];
 uint8_t jetsondata[3];
-uint8_t jetsondata4[4];
-uint8_t autoY[3] = ":Y0";
+uint8_t jetsondata4[5];
+uint8_t autoY[3] = "&Y0";
 uint8_t autoN[3] = ":N0";
 uint8_t start[1];
 uint8_t start2[1];
@@ -90,7 +90,10 @@ uint8_t byte6;
 uint8_t byte7;
 uint8_t byte8;
 
-uint8_t chsm;
+uint8_t chsm = 1;
+
+uint8_t wheelStopFlag_L; //left wheels stopped - flag
+uint8_t wheelStopFlag_R; //right wheels stopped - flag
 
 float pwm1 = 0;
 float pwm2 = 0;
@@ -105,6 +108,7 @@ float sy = 0;
 uint32_t time;
 uint32_t timereset;
 uint32_t timeauto;
+uint32_t timeauto2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -208,6 +212,7 @@ int main(void)
 	time = HAL_GetTick();
 	timereset = HAL_GetTick();
 	timeauto = HAL_GetTick();
+	timeauto2 = HAL_GetTick();
 	stoppodst();
 	stopczlon5();
 	stopczlon1();
@@ -218,7 +223,8 @@ int main(void)
 	servoy0();
 
 	autoY[2] = ((autoY[0] + autoY[1]) & 0xFF);
-	autoN[2] = ((autoN[0] + autoN[1]) & 0xFF);
+	HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, SET);
+
 
   /* USER CODE END 2 */
 
@@ -228,308 +234,104 @@ int main(void)
 
 		//Check if there is receive message
 
-		if (nRF24_RXAvailible()) {
-			//if working blink diode once per second
-			if (HAL_GetTick() - time > 1000) {
-				HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-				time = HAL_GetTick();
-			}
-			//read received data and save to nrfdata variable
-			nRF24_ReadRXPaylaod(nrfdata);
-			timereset = HAL_GetTick();
-
-			//byte 1
-			button = nrfdata[0] & 0b00000001; // acsii 1 dec 49
-			button01 = (nrfdata[0] & 0b00000010) >> 1; // ascii 2 dec 50
-			button1A = (nrfdata[0] & 0b00000100) >> 2; // ascii 3 dec 51
-			button1B = (nrfdata[0] & 0b00001000) >> 3; // ascii 4 dec 52
-			button2A = (nrfdata[0] & 0b00010000) >> 4; // ascii 5 dec 53
-			button2B = (nrfdata[0] & 0b00100000) >> 5; // ascii 6 dec 54
-			button3A = (nrfdata[0] & 0b01000000) >> 6; // ascii 7 dec 55 otw
-			button3B = (nrfdata[0] & 0b10000000) >> 7; // ascii 8 dec 56 zamk
-
-			//byte 2
-			button4A = (nrfdata[1] & 0b00000001); // acsii 9 dec 57
-			button4B = (nrfdata[1] & 0b00000010) >> 1; // ascii : dec 58
-			moveA = (nrfdata[1] & 0b00000100) >> 2; // ascii ; dec 59
-			moveB = (nrfdata[1] & 0b00001000) >> 3; // ascii < dec 60
-			rotateA = (nrfdata[1] & 0b00010000) >> 4; // ascii > dec 62
-			rotateB = (nrfdata[1] & 0b00100000) >> 5; // ascii ? dec 63
-			offcon = (nrfdata[1] & 0b01000000) >> 6; // ascii 7
-			autonomy = (nrfdata[1] & 0b10000000) >> 7; // ascii 8
-
-			byte1 = nrfdata[0];
-			byte2 = nrfdata[1];
-			byte3 = nrfdata[2];
-			byte4 = nrfdata[3];
-			byte5 = nrfdata[4];
-			byte6 = nrfdata[5];
-			byte7 = nrfdata[6]; // nrfdata6
-			byte8 = nrfdata[7]; // nrfdata7
-
-			chsm = nrfdata[8];
-			sum = ((byte1 + byte2 + byte3 + byte4 + byte5 + byte6 + byte7
-					+ byte8) & 0xFF);
-
-		}
 
 		//if there is no signal restart nRF24 and stop motor
-		if (HAL_GetTick() - timereset > 400) {
-			if (HAL_UART_Receive(&huart2, start2, 1, 100) != 3 && start2[0] == 38)
+
+			HAL_UART_Receive(&huart2, jetsondata4, 5, 500);
+			if (jetsondata4[0] == 38)
 					{
+				HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, RESET);
 						//autonomia po braku anteny
 
-						HAL_UART_Receive(&huart2, jetsondata4, 4, 100);
-						if (jetsondata4[3] == ((jetsondata4[2]+jetsondata4[1] + jetsondata4[0] + start2[0]) & 0xFF))
+						//HAL_UART_Receive(&huart2, jetsondata4, 4, 1000);
+						if (jetsondata4[4] == ((jetsondata4[2]+jetsondata4[1] + jetsondata4[0] + jetsondata4[3]) & 0xFF))
 						{
-						pwm1 = map(jetsondata4[0], 32, 127, 0, 1000);
+							timeauto2 = HAL_GetTick();
+							HAL_UART_Transmit(&huart2, autoY , 3, HAL_MAX_DELAY);
+												pwm1 = map(jetsondata4[1], 32, 127, 0, 1000);
 												pwm1 = (pwm1 - 500) * 2;
-
-												if (pwm1 > -200 && pwm1 < 200) {
-													PWMval(6, 0);
-												}
-
-												else if (pwm1 > pwmRight) {
-													pwmRight = pwmRight + step;
-												}
-												else if (pwm1 < pwmRight) {
-													pwmRight = pwmRight - step;
-												}
-												if (pwmRight > 0) {
-													RmotorF();
-													PWMval(6, (int) pwmRight);
-												}
-												else if (pwmRight < 0) {
-													RmotorB();
-													PWMval(6, ((int) pwmRight) * -1);
-												}
-
-												pwm2 = map(jetsondata4[1], 32, 127, 0, 1000);
+												pwm2 = map(jetsondata4[2], 32, 127, 0, 1000);
 												pwm2 = (pwm2 - 500) * 2;
-												if (pwm1 > -200 && pwm1 < 200) {
-													PWMval(7, 0);
-												}
-												else if (pwm2 > pwmLeft) {
-													pwmLeft = pwmLeft + step;
-												}
-												else if (pwm2 < pwmLeft) {
-													pwmLeft = pwmLeft - step;
-												}
-												if (pwmLeft > 0) {
-													LmotorF();
-													PWMval(7, (int) pwmLeft);
-												}
-												else if (pwmLeft < 0) {
-													LmotorB();
-													PWMval(7, ((int) pwmLeft) * -1);
-												}
-												LEDR = (nrfdata[1] & 0b00000001);
-												LEDG = (nrfdata[1] & 0b00000010) >> 1;
-												LEDY = (nrfdata[1] & 0b00000100) >> 2;
-												otw = (nrfdata[1] & 0b00001000) >> 3;
+												LEDR = (jetsondata4[3] & 0b00000001);
+												LEDG = (jetsondata4[3] & 0b00000010) >> 1;
+												LEDY = (jetsondata4[3] & 0b00000100) >> 2;
+												otw = (jetsondata4[3] & 0b00001000) >> 3;
 
-												if (otw){
-													//otw chwytaka
-													czlon2L();
-													PWMval(2, 1000);
-												}
-												if (LEDR){
-													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDR){
-													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
-												}
-												if (LEDG){
-													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDG){
-													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
-												}
-												if (LEDY){
-													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDY){
-													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
 												}
 
+
+
 						}
 
 
-					}
-			else {
-			nRF24_Init(&hspi2);
-			nRF24_SetRXAddress(0, "Odb");
-			nRF24_SetTXAddress("Nad");
-			nRF24_RX_Mode();
-			stoppodst();
-			stopczlon5();
-			stopczlon1();
-			stopczlon2();
-			stopczlon3();
-			stopczlon4();
-			servox0();
-			servoy0();
-			if (0 > pwmLeft) {
-				pwmLeft = pwmLeft + 2;
-			} else if (0 < pwmLeft) {
-				pwmLeft = pwmLeft - 2;
-			}
-			if (pwmLeft >= 0) {
-				LmotorF();
-				PWMval(7, (int) pwmLeft);
-			} else if (pwmLeft < 0) {
-				LmotorB();
-				PWMval(7, ((int) pwmLeft) * -1);
-			}
-			if (0 > pwmRight) {
-				pwmRight = pwmRight + 2;
-			} else if (0 < pwmRight) {
-				pwmRight = pwmRight - 2;
-			}
-			if (pwmRight >= 0) {
-				RmotorF();
-				PWMval(6, (int) pwmRight);
-			} else if (pwmRight < 0) {
-				RmotorB();
-				PWMval(6, ((int) pwmRight) * -1);
-			}
 
-		}
-		}
+																		if (pwm1 > pwmRight) {
+																			pwmRight = pwmRight + step;
+																		}
+																		else if (pwm1 < pwmRight) {
+																			pwmRight = pwmRight - step;
+																		}
+																		if (pwm1 > -200 && pwm1 < 200) {
+																			PWMval(6, 0);
+																		}
+																		else if (pwmRight > 0) {
+																			RmotorF();
+																			PWMval(6, (int) pwmRight);
+																		}
+																		else if (pwmRight < 0) {
+																			RmotorB();
+																			PWMval(6, ((int) pwmRight) * -1);
+																		}
 
-		else if (sum == chsm) {
-			if (offcon) {
-				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin,
-						GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin,
-						GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
-				stoppodst();
-				stopczlon5();
-				stopczlon1();
-				stopczlon2();
-				stopczlon3();
-				stopczlon4();
-				stopjazdaR();
-				stopjazdaL();
-				servox0();
-				servoy0();
 
-			}
-			else if (autonomy)
-			{
-				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin,
-						GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin,
-						GPIO_PIN_RESET);
-				//HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
 
-				HAL_UART_Transmit(&huart2, autoY, 3, 100);
+																		if (pwm2 > pwmLeft) {
+																			pwmLeft = pwmLeft + step;
+																		}
+																		else if (pwm2 < pwmLeft) {
+																			pwmLeft = pwmLeft - step;
+																		}
+																		if (pwm2 > -200 && pwm2 < 200) {
+																			PWMval(7, 0);
+																		}
+																		else if (pwmLeft > 0) {
+																			LmotorF();
+																			PWMval(7, (int) pwmLeft);
+																		}
+																		else if (pwmLeft < 0) {
+																			LmotorB();
+																			PWMval(7, ((int) pwmLeft) * -1);
+																		}
+																			if (otw){
+																				//otw chwytaka
+																				czlon2L();
+																				PWMval(2, 1000);
+																			}
 
-				if (HAL_UART_Receive(&huart2, start, 1, 100) != 3 && start[0] == 58)
-				{
+																			if (LEDR){
+																				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
+																			}
+																			else if (!LEDR){
+																				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
+																			}
+																			if (LEDG){
+																				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
+																			}
+																			else if (!LEDG){
+																				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
+																			}
+																			if (LEDY){
+																				HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
+																			}
+																			else if (!LEDY){
+																				HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
+																			}
 
-					HAL_UART_Receive(&huart2, jetsondata, 3, 100);
 
-					if (jetsondata[2] == ((jetsondata[1] + jetsondata[0] + start[0]) & 0xFF))
-					{
 
-						if (jetsondata[1] == 200 && jetsondata[2] == 200)
-						{
-							//otw chwytaka
-							czlon2L();
-							PWMval(2, 1000);
-						}
-						else
-						{
-						pwm1 = map(jetsondata[0], 32, 127, 0, 1000);
-						pwm1 = (pwm1 - 500) * 2;
 
-						if (pwm1 > -200 && pwm1 < 200) {
-							PWMval(6, 0);
-						}
 
-						else if (pwm1 > pwmRight) {
-							pwmRight = pwmRight + step;
-						}
-						else if (pwm1 < pwmRight) {
-							pwmRight = pwmRight - step;
-						}
-						if (pwmRight > 0) {
-							RmotorF();
-							PWMval(6, (int) pwmRight);
-						}
-						else if (pwmRight < 0) {
-							RmotorB();
-							PWMval(6, ((int) pwmRight) * -1);
-						}
 
-						pwm2 = map(jetsondata[1], 32, 127, 0, 1000);
-						pwm2 = (pwm2 - 500) * 2;
-						if (pwm1 > -200 && pwm1 < 200) {
-							PWMval(7, 0);
-						}
-						else if (pwm2 > pwmLeft) {
-							pwmLeft = pwmLeft + step;
-						}
-						else if (pwm2 < pwmLeft) {
-							pwmLeft = pwmLeft - step;
-						}
-						if (pwmLeft > 0) {
-							LmotorF();
-							PWMval(7, (int) pwmLeft);
-						}
-						else if (pwmLeft < 0) {
-							LmotorB();
-							PWMval(7, ((int) pwmLeft) * -1);
-						}
-
-						if (HAL_GetTick() - timeauto > 1000) {
-							HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port,
-									LED_YELLOW_Pin);
-							timeauto = HAL_GetTick();
-						}
-
-						}
-
-					}
-					else {
-						stoppodst();
-						stopczlon5();
-						stopczlon1();
-						stopczlon2();
-						stopczlon3();
-						stopczlon4();
-						stopjazdaR();
-						stopjazdaL();
-					}
-				}
-
-			}
-			else {
-				// triggergripper();
-				HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin,
-						GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin,
-						GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin,
-						GPIO_PIN_SET);
-
-				rightside();
-				leftside();
-				motor5control();
-				motor4control();
-				motor3control();
-				motor2control();
-				motor1control();
-				motor0control();
-				servox();
-				servoy();
-
-				// move();
-				// rotate();
-			}
-		}
 
 		/*
 		 if(nRF24_RXAvailible())
