@@ -1,10 +1,54 @@
-14:48:33 **** Incremental Build of configuration Debug for project nowyManipulator ****
+15:07:07 **** Incremental Build of configuration Debug for project nowyManipulator ****
 make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Device/ST/STM32L1xx/Include -IC:/Users/marci/STM32Cube/Repository/STM32Cube_FW_L1_V1.10.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:195:24: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  195 |  nRF24_SetRXAddress(0, "Odb");
+      |                        ^~~~~
+      |                        |
+      |                        char *
+In file included from ../Core/Src/main.c:30:
+../Core/Inc/nRF24.h:34:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   34 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t *address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:196:21: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  196 |  nRF24_SetTXAddress("Nad");
+      |                     ^~~~~
+      |                     |
+      |                     char *
+In file included from ../Core/Src/main.c:30:
+../Core/Inc/nRF24.h:35:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   35 | void nRF24_SetTXAddress(uint8_t *address);
+      |                         ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:417:27: warning: pointer targets in passing argument 2 of 'nRF24_SetRXAddress' differ in signedness [-Wpointer-sign]
+  417 |     nRF24_SetRXAddress(0, "Odb");
+      |                           ^~~~~
+      |                           |
+      |                           char *
+In file included from ../Core/Src/main.c:30:
+../Core/Inc/nRF24.h:34:48: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   34 | void nRF24_SetRXAddress(uint8_t pipe, uint8_t *address); // Remember to define RX address before TX
+      |                                       ~~~~~~~~~^~~~~~~
+../Core/Src/main.c:418:24: warning: pointer targets in passing argument 1 of 'nRF24_SetTXAddress' differ in signedness [-Wpointer-sign]
+  418 |     nRF24_SetTXAddress("Nad");
+      |                        ^~~~~
+      |                        |
+      |                        char *
+In file included from ../Core/Src/main.c:30:
+../Core/Inc/nRF24.h:35:34: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   35 | void nRF24_SetTXAddress(uint8_t *address);
+      |                         ~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "nowyManipulator.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marci\STM32CubeIDE\workspace_1.12.0\nowyManipulator\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nowyManipulator.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: nowyManipulator.elf
+ 
 arm-none-eabi-size   nowyManipulator.elf 
+arm-none-eabi-objdump -h -S  nowyManipulator.elf  > "nowyManipulator.list"
    text	   data	    bss	    dec	    hex	filename
   25032	     28	   2092	  27152	   6a10	nowyManipulator.elf
 Finished building: default.size.stdout
  
+Finished building: nowyManipulator.list
+ 
 
-14:48:33 Build Finished. 0 errors, 0 warnings. (took 590ms)
+15:07:10 Build Finished. 0 errors, 4 warnings. (took 3s.713ms)
 

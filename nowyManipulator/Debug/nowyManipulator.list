@@ -4160,12 +4160,12 @@ void motor1control() {
  800218e:	d007      	beq.n	80021a0 <motor1control+0x1c>
 		czlon1L();
  8002190:	f7ff fbf2 	bl	8001978 <czlon1L>
-		PWMval(1, 750);
- 8002194:	f240 21ee 	movw	r1, #750	; 0x2ee
+		PWMval(1, 1000);
+ 8002194:	f44f 717a 	mov.w	r1, #1000	; 0x3e8
  8002198:	2001      	movs	r0, #1
  800219a:	f7ff fb53 	bl	8001844 <PWMval>
 		czlon1R();
-		PWMval(1, 750);
+		PWMval(1, 1000);
 	} else {
 		stopczlon1();
 	}
@@ -4178,8 +4178,8 @@ void motor1control() {
  80021a6:	d007      	beq.n	80021b8 <motor1control+0x34>
 		czlon1R();
  80021a8:	f7ff fbd2 	bl	8001950 <czlon1R>
-		PWMval(1, 750);
- 80021ac:	f240 21ee 	movw	r1, #750	; 0x2ee
+		PWMval(1, 1000);
+ 80021ac:	f44f 717a 	mov.w	r1, #1000	; 0x3e8
  80021b0:	2001      	movs	r0, #1
  80021b2:	f7ff fb47 	bl	8001844 <PWMval>
 }

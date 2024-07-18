@@ -870,10 +870,10 @@ void motor0control() {
 void motor1control() {
 	if (button2A) {
 		czlon1L();
-		PWMval(1, 750);
+		PWMval(1, 1000);
 	} else if (button2B) {
 		czlon1R();
-		PWMval(1, 750);
+		PWMval(1, 1000);
 	} else {
 		stopczlon1();
 	}
