@@ -92,9 +92,6 @@ uint8_t byte8;
 
 uint8_t chsm;
 
-uint8_t wheelStopFlag_L; //left wheels stopped - flag
-uint8_t wheelStopFlag_R; //right wheels stopped - flag
-
 float pwm1 = 0;
 float pwm2 = 0;
 float step = 0.25;
@@ -392,7 +389,11 @@ int main(void)
 			}
 			else {
 				PWMval(7, 0);
-				wheelStopFlag_L = 1;
+				nRF24_Init(&hspi2);
+				nRF24_SetRXAddress(0, "Odb");
+				nRF24_SetTXAddress("Nad");
+				nRF24_RX_Mode();
+
 			}
 			if (0 > pwmRight) {
 				pwmRight = pwmRight + 20;
@@ -408,11 +409,6 @@ int main(void)
 			}
 			else {
 				PWMval(6, 0);
-				wheelStopFlag_R = 1;
-			}
-
-			if (wheelStopFlag_L && wheelStopFlag_R){
-				//nRF restart
 				nRF24_Init(&hspi2);
 				nRF24_SetRXAddress(0, "Odb");
 				nRF24_SetTXAddress("Nad");

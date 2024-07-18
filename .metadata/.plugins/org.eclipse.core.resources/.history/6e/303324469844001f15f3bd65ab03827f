@@ -412,7 +412,7 @@ int main(void)
 			}
 
 			if (wheelStopFlag_L && wheelStopFlag_R){
-				//nRF restart
+
 				nRF24_Init(&hspi2);
 				nRF24_SetRXAddress(0, "Odb");
 				nRF24_SetTXAddress("Nad");

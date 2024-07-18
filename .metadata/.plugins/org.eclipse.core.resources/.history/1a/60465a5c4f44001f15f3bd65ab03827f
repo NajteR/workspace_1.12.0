@@ -92,9 +92,6 @@ uint8_t byte8;
 
 uint8_t chsm;
 
-uint8_t wheelStopFlag_L; //left wheels stopped - flag
-uint8_t wheelStopFlag_R; //right wheels stopped - flag
-
 float pwm1 = 0;
 float pwm2 = 0;
 float step = 0.25;
@@ -108,7 +105,6 @@ float sy = 0;
 uint32_t time;
 uint32_t timereset;
 uint32_t timeauto;
-uint32_t timeauto2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -212,7 +208,6 @@ int main(void)
 	time = HAL_GetTick();
 	timereset = HAL_GetTick();
 	timeauto = HAL_GetTick();
-	timeauto2 = HAL_GetTick();
 	stoppodst();
 	stopczlon5();
 	stopczlon1();
@@ -282,14 +277,12 @@ int main(void)
 		if (HAL_GetTick() - timereset > 400) {
 			if (HAL_UART_Receive(&huart2, start2, 1, 20) != 3 && start2[0] == 38)
 					{
-
 						//autonomia po braku anteny
 
 						HAL_UART_Receive(&huart2, jetsondata4, 4, 100);
 						if (jetsondata4[3] == ((jetsondata4[2]+jetsondata4[1] + jetsondata4[0] + start2[0]) & 0xFF))
 						{
-							timeauto2 = HAL_GetTick();
-							HAL_UART_Transmit(&huart2, autoY , 3, 60);
+							HAL_UART_Transmit(&huart2, autoY , 3, 50);
 						pwm1 = map(jetsondata4[0], 32, 127, 0, 1000);
 												pwm1 = (pwm1 - 500) * 2;
 
@@ -331,10 +324,10 @@ int main(void)
 													LmotorB();
 													PWMval(7, ((int) pwmLeft) * -1);
 												}
-												LEDR = (jetsondata4[2] & 0b00000001);
-												LEDG = (jetsondata4[2] & 0b00000010) >> 1;
-												LEDY = (jetsondata4[2] & 0b00000100) >> 2;
-												otw = (jetsondata4[2] & 0b00001000) >> 3;
+												LEDR = (nrfdata[1] & 0b00000001);
+												LEDG = (nrfdata[1] & 0b00000010) >> 1;
+												LEDY = (nrfdata[1] & 0b00000100) >> 2;
+												otw = (nrfdata[1] & 0b00001000) >> 3;
 
 												if (otw){
 													//otw chwytaka
@@ -364,7 +357,7 @@ int main(void)
 
 
 					}
-			else if (HAL_GetTick() - timeauto2 > 400) {
+			else {
 				// pewnie przez to dziala wolno
 			//nRF24_Init(&hspi2);
 			//nRF24_SetRXAddress(0, "Odb");
@@ -383,16 +376,20 @@ int main(void)
 			} else if (0 < pwmLeft) {
 				pwmLeft = pwmLeft - 20;
 			}
-			if (pwmLeft >=  20) {
+			if (pwmLeft > 2) {
 				LmotorF();
 				PWMval(7, (int) pwmLeft);
-			} else if (pwmLeft < -20) {
+			} else if (pwmLeft < -2) {
 				LmotorB();
 				PWMval(7, ((int) pwmLeft) * -1);
 			}
 			else {
 				PWMval(7, 0);
-				wheelStopFlag_L = 1;
+				nRF24_Init(&hspi2);
+				nRF24_SetRXAddress(0, "Odb");
+				nRF24_SetTXAddress("Nad");
+				nRF24_RX_Mode();
+
 			}
 			if (0 > pwmRight) {
 				pwmRight = pwmRight + 20;
@@ -408,11 +405,6 @@ int main(void)
 			}
 			else {
 				PWMval(6, 0);
-				wheelStopFlag_R = 1;
-			}
-
-			if (wheelStopFlag_L && wheelStopFlag_R){
-				//nRF restart
 				nRF24_Init(&hspi2);
 				nRF24_SetRXAddress(0, "Odb");
 				nRF24_SetTXAddress("Nad");

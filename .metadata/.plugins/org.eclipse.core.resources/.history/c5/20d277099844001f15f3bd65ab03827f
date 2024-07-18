@@ -392,7 +392,11 @@ int main(void)
 			}
 			else {
 				PWMval(7, 0);
-				wheelStopFlag_L = 1;
+				nRF24_Init(&hspi2);
+				nRF24_SetRXAddress(0, "Odb");
+				nRF24_SetTXAddress("Nad");
+				nRF24_RX_Mode();
+
 			}
 			if (0 > pwmRight) {
 				pwmRight = pwmRight + 20;
@@ -408,11 +412,6 @@ int main(void)
 			}
 			else {
 				PWMval(6, 0);
-				wheelStopFlag_R = 1;
-			}
-
-			if (wheelStopFlag_L && wheelStopFlag_R){
-				//nRF restart
 				nRF24_Init(&hspi2);
 				nRF24_SetRXAddress(0, "Odb");
 				nRF24_SetTXAddress("Nad");
