@@ -95,8 +95,8 @@ uint8_t chsm = 1;
 uint8_t wheelStopFlag_L; //left wheels stopped - flag
 uint8_t wheelStopFlag_R; //right wheels stopped - flag
 
-float pwm1 = 0;
-float pwm2 = 0;
+float pwm1 = 500;
+float pwm2 = 500;
 float step = 0.25;
 
 float pwmRight = 0;
@@ -237,7 +237,7 @@ int main(void)
 
 		//if there is no signal restart nRF24 and stop motor
 
-			HAL_UART_Receive(&huart2, jetsondata4, 5, 500);
+			HAL_UART_Receive(&huart2, jetsondata4, 5, 1000);
 			if (jetsondata4[0] == 38)
 					{
 				HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, RESET);
@@ -249,9 +249,7 @@ int main(void)
 							timeauto2 = HAL_GetTick();
 							HAL_UART_Transmit(&huart2, autoY , 3, HAL_MAX_DELAY);
 												pwm1 = map(jetsondata4[1], 32, 127, 0, 1000);
-												pwm1 = (pwm1 - 500) * 2;
 												pwm2 = map(jetsondata4[2], 32, 127, 0, 1000);
-												pwm2 = (pwm2 - 500) * 2;
 												LEDR = (jetsondata4[3] & 0b00000001);
 												LEDG = (jetsondata4[3] & 0b00000010) >> 1;
 												LEDY = (jetsondata4[3] & 0b00000100) >> 2;
@@ -262,7 +260,7 @@ int main(void)
 
 
 						}
-
+																	pwm1 = (pwm1 - 500) * 2;
 
 
 																		if (pwm1 > pwmRight) {
@@ -282,7 +280,7 @@ int main(void)
 																			RmotorB();
 																			PWMval(6, ((int) pwmRight) * -1);
 																		}
-
+																		pwm2 = (pwm2 - 500) * 2;
 
 
 																		if (pwm2 > pwmLeft) {
@@ -291,7 +289,7 @@ int main(void)
 																		else if (pwm2 < pwmLeft) {
 																			pwmLeft = pwmLeft - step;
 																		}
-																		if (pwm2 > -200 && pwm2 < 200) {
+																		if (pwm1 > -200 && pwm1 < 200) {
 																			PWMval(7, 0);
 																		}
 																		else if (pwmLeft > 0) {
@@ -301,13 +299,12 @@ int main(void)
 																		else if (pwmLeft < 0) {
 																			LmotorB();
 																			PWMval(7, ((int) pwmLeft) * -1);
-																		}
 																			if (otw){
 																				//otw chwytaka
 																				czlon2L();
 																				PWMval(2, 1000);
 																			}
-
+																		}
 																			if (LEDR){
 																				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
 																			}

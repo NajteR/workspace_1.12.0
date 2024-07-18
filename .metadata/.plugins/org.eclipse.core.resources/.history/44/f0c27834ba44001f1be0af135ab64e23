@@ -237,7 +237,7 @@ int main(void)
 
 		//if there is no signal restart nRF24 and stop motor
 
-			HAL_UART_Receive(&huart2, jetsondata4, 5, 500);
+			HAL_UART_Receive(&huart2, jetsondata4, 5, 1000);
 			if (jetsondata4[0] == 38)
 					{
 				HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, RESET);

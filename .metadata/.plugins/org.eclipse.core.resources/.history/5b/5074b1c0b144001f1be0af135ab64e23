@@ -52,7 +52,7 @@
 /* USER CODE BEGIN PV */
 uint8_t nrfdata[9];
 uint8_t jetsondata[3];
-uint8_t jetsondata4[5];
+uint8_t jetsondata4[4];
 uint8_t autoY[3] = "&Y0";
 uint8_t autoN[3] = ":N0";
 uint8_t start[1];
@@ -237,97 +237,88 @@ int main(void)
 
 		//if there is no signal restart nRF24 and stop motor
 
-			HAL_UART_Receive(&huart2, jetsondata4, 5, 500);
-			if (jetsondata4[0] == 38)
+			HAL_UART_Receive(&huart2, start2, 1, 1000);
+			if (start2[0] == 38)
 					{
 				HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, RESET);
 						//autonomia po braku anteny
 
-						//HAL_UART_Receive(&huart2, jetsondata4, 4, 1000);
-						if (jetsondata4[4] == ((jetsondata4[2]+jetsondata4[1] + jetsondata4[0] + jetsondata4[3]) & 0xFF))
+						HAL_UART_Receive(&huart2, jetsondata4, 4, 1000);
+						if (jetsondata4[3] == ((jetsondata4[2]+jetsondata4[1] + jetsondata4[0] + start2[0]) & 0xFF))
 						{
 							timeauto2 = HAL_GetTick();
 							HAL_UART_Transmit(&huart2, autoY , 3, HAL_MAX_DELAY);
-												pwm1 = map(jetsondata4[1], 32, 127, 0, 1000);
+						pwm1 = map(jetsondata4[1], 32, 127, 0, 1000);
 												pwm1 = (pwm1 - 500) * 2;
+
+												if (pwm1 > -200 && pwm1 < 200) {
+													PWMval(6, 0);
+												}
+
+												else if (pwm1 > pwmRight) {
+													pwmRight = pwmRight + step;
+												}
+												else if (pwm1 < pwmRight) {
+													pwmRight = pwmRight - step;
+												}
+												if (pwmRight > 0) {
+													RmotorF();
+													PWMval(6, (int) pwmRight);
+												}
+												else if (pwmRight < 0) {
+													RmotorB();
+													PWMval(6, ((int) pwmRight) * -1);
+												}
+
 												pwm2 = map(jetsondata4[2], 32, 127, 0, 1000);
 												pwm2 = (pwm2 - 500) * 2;
+												if (pwm1 > -200 && pwm1 < 200) {
+													PWMval(7, 0);
+												}
+												else if (pwm2 > pwmLeft) {
+													pwmLeft = pwmLeft + step;
+												}
+												else if (pwm2 < pwmLeft) {
+													pwmLeft = pwmLeft - step;
+												}
+												if (pwmLeft > 0) {
+													LmotorF();
+													PWMval(7, (int) pwmLeft);
+												}
+												else if (pwmLeft < 0) {
+													LmotorB();
+													PWMval(7, ((int) pwmLeft) * -1);
+												}
 												LEDR = (jetsondata4[3] & 0b00000001);
 												LEDG = (jetsondata4[3] & 0b00000010) >> 1;
 												LEDY = (jetsondata4[3] & 0b00000100) >> 2;
 												otw = (jetsondata4[3] & 0b00001000) >> 3;
 
+												if (otw){
+													//otw chwytaka
+													czlon2L();
+													PWMval(2, 1000);
 												}
-
-
-
+												if (LEDR){
+													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
+												}
+												else if (!LEDR){
+													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
+												}
+												if (LEDG){
+													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
+												}
+												else if (!LEDG){
+													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
+												}
+												if (LEDY){
+													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
+												}
+												else if (!LEDY){
+													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
+												}
 						}
-
-
-
-																		if (pwm1 > pwmRight) {
-																			pwmRight = pwmRight + step;
-																		}
-																		else if (pwm1 < pwmRight) {
-																			pwmRight = pwmRight - step;
-																		}
-																		if (pwm1 > -200 && pwm1 < 200) {
-																			PWMval(6, 0);
-																		}
-																		else if (pwmRight > 0) {
-																			RmotorF();
-																			PWMval(6, (int) pwmRight);
-																		}
-																		else if (pwmRight < 0) {
-																			RmotorB();
-																			PWMval(6, ((int) pwmRight) * -1);
-																		}
-
-
-
-																		if (pwm2 > pwmLeft) {
-																			pwmLeft = pwmLeft + step;
-																		}
-																		else if (pwm2 < pwmLeft) {
-																			pwmLeft = pwmLeft - step;
-																		}
-																		if (pwm2 > -200 && pwm2 < 200) {
-																			PWMval(7, 0);
-																		}
-																		else if (pwmLeft > 0) {
-																			LmotorF();
-																			PWMval(7, (int) pwmLeft);
-																		}
-																		else if (pwmLeft < 0) {
-																			LmotorB();
-																			PWMval(7, ((int) pwmLeft) * -1);
-																		}
-																			if (otw){
-																				//otw chwytaka
-																				czlon2L();
-																				PWMval(2, 1000);
-																			}
-
-																			if (LEDR){
-																				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
-																			}
-																			else if (!LEDR){
-																				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
-																			}
-																			if (LEDG){
-																				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
-																			}
-																			else if (!LEDG){
-																				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
-																			}
-																			if (LEDY){
-																				HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
-																			}
-																			else if (!LEDY){
-																				HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
-																			}
-
-
+					}
 
 
 
