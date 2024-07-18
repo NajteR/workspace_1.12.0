@@ -1,4 +1,4 @@
-15:23:25 **** Incremental Build of configuration Debug for project nowyManipulator ****
+22:20:57 **** Incremental Build of configuration Debug for project nowyManipulator ****
 make -j12 all 
 arm-none-eabi-size   nowyManipulator.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   nowyManipulator.elf
 Finished building: default.size.stdout
  
 
-15:23:26 Build Finished. 0 errors, 0 warnings. (took 460ms)
+22:20:58 Build Finished. 0 errors, 0 warnings. (took 1s.240ms)
 
