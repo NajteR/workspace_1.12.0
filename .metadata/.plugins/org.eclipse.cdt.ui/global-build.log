@@ -1,21 +1,7 @@
-15:21:52 **** Incremental Build of configuration Debug for project nowyManipulator ****
+23:34:44 **** Incremental Build of configuration Debug for project nowyManipulator ****
 make -j12 all 
 arm-none-eabi-size   nowyManipulator.elf 
    text	   data	    bss	    dec	    hex	filename
-  25032	     28	   2092	  27152	   6a10	nowyManipulator.elf
-Finished building: default.size.stdout
- 
-15:23:25 **** Incremental Build of configuration Debug for project nowyManipulator ****
-make -j12 all 
-arm-none-eabi-size   nowyManipulator.elf 
-   text	   data	    bss	    dec	    hex	filename
-  25032	     28	   2092	  27152	   6a10	nowyManipulator.elf
-Finished building: default.size.stdout
- 
-22:20:57 **** Incremental Build of configuration Debug for project nowyManipulator ****
-make -j12 all 
-arm-none-eabi-size   nowyManipulator.elf 
-   text	   data	    bss	    dec	    hex	filename
-  25032	     28	   2092	  27152	   6a10	nowyManipulator.elf
+  23956	     28	   2084	  26068	   65d4	nowyManipulator.elf
 Finished building: default.size.stdout
  

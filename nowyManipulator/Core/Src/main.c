@@ -280,96 +280,7 @@ int main(void)
 
 		//if there is no signal restart nRF24 and stop motor
 		if (HAL_GetTick() - timereset > 400) {
-			if (HAL_UART_Receive(&huart2, start2, 1, 20) != 3 && start2[0] == 38)
-					{
 
-						//autonomia po braku anteny
-
-						HAL_UART_Receive(&huart2, jetsondata4, 4, 100);
-						if (jetsondata4[3] == ((jetsondata4[2]+jetsondata4[1] + jetsondata4[0] + start2[0]) & 0xFF))
-						{
-							timeauto2 = HAL_GetTick();
-							HAL_UART_Transmit(&huart2, autoY , 3, 60);
-						pwm1 = map(jetsondata4[0], 32, 127, 0, 1000);
-												pwm1 = (pwm1 - 500) * 2;
-
-												if (pwm1 > -200 && pwm1 < 200) {
-													PWMval(6, 0);
-												}
-
-												else if (pwm1 > pwmRight) {
-													pwmRight = pwmRight + step;
-												}
-												else if (pwm1 < pwmRight) {
-													pwmRight = pwmRight - step;
-												}
-												if (pwmRight > 0) {
-													RmotorF();
-													PWMval(6, (int) pwmRight);
-												}
-												else if (pwmRight < 0) {
-													RmotorB();
-													PWMval(6, ((int) pwmRight) * -1);
-												}
-
-												pwm2 = map(jetsondata4[1], 32, 127, 0, 1000);
-												pwm2 = (pwm2 - 500) * 2;
-												if (pwm1 > -200 && pwm1 < 200) {
-													PWMval(7, 0);
-												}
-												else if (pwm2 > pwmLeft) {
-													pwmLeft = pwmLeft + step;
-												}
-												else if (pwm2 < pwmLeft) {
-													pwmLeft = pwmLeft - step;
-												}
-												if (pwmLeft > 0) {
-													LmotorF();
-													PWMval(7, (int) pwmLeft);
-												}
-												else if (pwmLeft < 0) {
-													LmotorB();
-													PWMval(7, ((int) pwmLeft) * -1);
-												}
-												LEDR = (jetsondata4[2] & 0b00000001);
-												LEDG = (jetsondata4[2] & 0b00000010) >> 1;
-												LEDY = (jetsondata4[2] & 0b00000100) >> 2;
-												otw = (jetsondata4[2] & 0b00001000) >> 3;
-
-												if (otw){
-													//otw chwytaka
-													czlon2L();
-													PWMval(2, 1000);
-												}
-												if (LEDR){
-													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDR){
-													HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
-												}
-												if (LEDG){
-													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDG){
-													HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
-												}
-												if (LEDY){
-													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
-												}
-												else if (!LEDY){
-													HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
-												}
-
-						}
-
-
-					}
-			else if (HAL_GetTick() - timeauto2 > 400) {
-				// pewnie przez to dziala wolno
-			//nRF24_Init(&hspi2);
-			//nRF24_SetRXAddress(0, "Odb");
-			//nRF24_SetTXAddress("Nad");
-			//nRF24_RX_Mode();
 			stoppodst();
 			stopczlon5();
 			stopczlon1();
@@ -420,9 +331,9 @@ int main(void)
 			}
 
 		}
-		}
 
-		else if (sum == chsm) {
+
+		if (sum == chsm) {
 			if (offcon) {
 				HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin,
 						GPIO_PIN_RESET);
