@@ -90,7 +90,7 @@ uint8_t byte6;
 uint8_t byte7;
 uint8_t byte8;
 
-uint8_t chsm = 1;
+uint8_t chsm;
 
 uint8_t wheelStopFlag_L; //left wheels stopped - flag
 uint8_t wheelStopFlag_R; //right wheels stopped - flag
